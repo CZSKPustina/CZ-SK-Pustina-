@@ -26,8 +26,8 @@
               card: '#151c27',
               border: '#243042',
               amber: '#f59e0b',
-              copper: '#ea580c',
-              copperHover: '#f97316',
+              copper: '#f97316',
+              copperHover: '#fb923c',
               ice: '#38bdf8',
               signal: '#34d399',
             }
@@ -38,7 +38,7 @@
   </script>
 
   <style>
-    /* Post-apokalyptický DayZ motiv se zimními a jantarovými akcenty */
+    /* Post-apokalyptický DayZ motiv se zimními a oranžovými akcenty */
     body {
       background-color: #080b10;
       color: #e2e8f0;
@@ -46,7 +46,7 @@
     .tactical-bg {
       background-image:
         radial-gradient(circle at 50% -15%, rgba(56, 189, 248, 0.10) 0%, rgba(8, 11, 16, 0) 55%),
-        radial-gradient(circle at 85% 15%, rgba(234, 88, 12, 0.08) 0%, rgba(8, 11, 16, 0) 45%),
+        radial-gradient(circle at 85% 15%, rgba(249, 115, 22, 0.09) 0%, rgba(8, 11, 16, 0) 45%),
         linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
       background-size: 100% 100%, 100% 100%, 28px 28px, 28px 28px;
@@ -89,16 +89,16 @@
             <span class="font-display font-bold text-lg sm:text-xl tracking-wider text-white block leading-none">
               CZ/SK <span class="text-pustina-copper">PUSTINA</span>
             </span>
-            <span class="text-[11px] uppercase tracking-widest text-sky-300/80 font-medium">DayZ • Chernarus</span>
+            <span class="text-[11px] uppercase tracking-widest text-sky-300/80 font-medium">DAYZ • CHERNARUS</span>
           </div>
         </a>
 
-        <!-- Desktopová navigace (bez Právní info & GDPR – to je v patičce) -->
+        <!-- Desktopová navigace -->
         <nav aria-label="Hlavní kategorie" class="hidden xl:flex items-center gap-1 text-xs font-semibold">
           <a href="#prehled" data-nav="prehled" class="nav-link px-3 py-2 rounded-xl transition">Přehled</a>
           <a href="#pomocnik" data-nav="pomocnik" class="nav-link px-3 py-2 rounded-xl transition">Herní pomocník & tipy</a>
-          <a href="#novinky" data-nav="novinky" class="nav-link px-3 py-2 rounded-xl transition">Novinky</a>
-          <a href="#obchod" data-nav="obchod" class="nav-link px-3 py-2 rounded-xl transition">Obchod</a>
+          <a href="#novinky" data-nav="novinky" class="nav-link px-3 py-2 rounded-xl transition">Novinky & Mechaniky</a>
+          <a href="#obchod" data-nav="obchod" class="nav-link px-3 py-2 rounded-xl transition">Obchod & tipy</a>
           <a href="#odmeny" data-nav="odmeny" class="nav-link px-3 py-2 rounded-xl transition">Odměny</a>
           <a href="#pravidla" data-nav="pravidla" class="nav-link px-3 py-2 rounded-xl transition">Pravidla</a>
           <a href="#podpora" data-nav="podpora" class="nav-link px-3 py-2 rounded-xl transition">Podpora / Donate</a>
@@ -123,11 +123,12 @@
       <div class="xl:hidden flex items-center gap-2 overflow-x-auto no-scrollbar py-2.5 border-t border-pustina-border/70 text-xs font-semibold">
         <a href="#prehled" data-nav="prehled" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Přehled</a>
         <a href="#pomocnik" data-nav="pomocnik" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Herní pomocník & tipy</a>
-        <a href="#novinky" data-nav="novinky" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Novinky</a>
-        <a href="#obchod" data-nav="obchod" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Obchod</a>
-        <a href="#odmeny" data-nav="odmeny" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Odměny</a>
-        <a href="#pravidla" data-nav="pravidla" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Pravidla</a>
+        <a href="#novinky" data-nav="novinky" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Novinky & Mechaniky</a>
+        <a href="#obchod" data-nav="obchod" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Obchod & tipy</a>
+        <a href="#odmeny" data-nav="odmeny" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Hodinové & Denní odměny</a>
+        <a href="#pravidla" data-nav="pravidla" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Pravidla & Stavba base</a>
         <a href="#podpora" data-nav="podpora" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Podpora / Donate</a>
+        <a href="#pravni-info" data-nav="pravni-info" class="nav-link shrink-0 px-3.5 py-2 rounded-full transition">Právní info & GDPR</a>
       </div>
     </div>
 
@@ -136,14 +137,15 @@
       <a href="#prehled" data-nav="prehled" class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold">Přehled serveru</a>
       <a href="#pomocnik" data-nav="pomocnik" class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold">Herní pomocník & tipy</a>
       <a href="#novinky" data-nav="novinky" class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold">Novinky & Mechaniky</a>
-      <a href="#obchod" data-nav="obchod" class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold">Obchod a bazar</a>
-      <a href="#odmeny" data-nav="odmeny" class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold">Odměny (Hodinové & Denní)</a>
+      <a href="#obchod" data-nav="obchod" class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold">Obchod & tipy</a>
+      <a href="#odmeny" data-nav="odmeny" class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold">Hodinové & Denní odměny</a>
       <a href="#pravidla" data-nav="pravidla" class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold">Pravidla & Stavba base</a>
-      <a href="#podpora" data-nav="podpora" class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold">Podpora / Donate (Anti-P2W)</a>
+      <a href="#podpora" data-nav="podpora" class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold">Podpora / Donate</a>
+      <a href="#pravni-info" data-nav="pravni-info" class="nav-link block px-4 py-3 rounded-xl text-sm font-semibold">Právní info & GDPR</a>
     </div>
   </header>
 
-  <!-- HLAVNÍ OBSAH: Zobrazuje se vždy 1 aktivní pohled podle hashe -->
+  <!-- HLAVNÍ OBSAH -->
   <main class="tactical-bg flex-1">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
 
@@ -171,10 +173,10 @@
           </div>
 
           <p class="text-base sm:text-lg text-gray-300 leading-relaxed max-w-3xl">
-            Přehledný informační rozcestník komunitního DayZ serveru <strong class="text-white">CZ/SK PUSTINA</strong> na mapě <strong class="text-white">Chernarus</strong>. Najdete zde pravidla, návody k virtuálním garážím, hráčskému bazaru v Otmelu, solárním okruhům i přehled odměn.
+            Přehledný informační rozcestník komunitního DayZ serveru <strong class="text-white">CZ/SK PUSTINA</strong> na mapě <strong class="text-white">Chernarus</strong>. Najdete zde pravidla, návody k virtuálním garážím, hráčskému bazaru v Otmelu, solárním okruhům, těžbě, eventům, receptům i přehled odměn.
           </p>
 
-          <!-- Čistá karta se základními údaji o připojení -->
+          <!-- Základní údaje o připojení -->
           <div class="bg-pustina-card border border-pustina-border rounded-2xl p-4 sm:p-6 space-y-5">
             <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-pustina-border">
               <div class="flex items-center gap-2.5">
@@ -186,20 +188,15 @@
               <span class="text-xs text-gray-400 font-mono">DayZ Standalone • PC</span>
             </div>
 
-            <!-- 3 hlavní dlaždice údajů serveru -->
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
               <div class="bg-pustina-bg/90 border border-pustina-border rounded-xl p-3.5 sm:p-4">
                 <span class="text-[11px] uppercase tracking-wider text-gray-400 block mb-1">Mapa</span>
-                <p class="font-display font-bold text-xl sm:text-2xl text-white">
-                  Chernarus
-                </p>
+                <p class="font-display font-bold text-xl sm:text-2xl text-white">Chernarus</p>
               </div>
 
               <div class="bg-pustina-bg/90 border border-pustina-border rounded-xl p-3.5 sm:p-4">
                 <span class="text-[11px] uppercase tracking-wider text-gray-400 block mb-1">Kapacita</span>
-                <p class="font-mono font-bold text-xl sm:text-2xl text-pustina-signal">
-                  40 slotů
-                </p>
+                <p class="font-mono font-bold text-xl sm:text-2xl text-pustina-signal">40 slotů</p>
               </div>
 
               <div class="bg-pustina-bg/90 border border-pustina-border rounded-xl p-3.5 sm:p-4">
@@ -210,7 +207,6 @@
               </div>
             </div>
 
-            <!-- Tlačítka pro kopírování IP a přechod na Discord -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
               <button type="button" onclick="copyServerIP(this)"
                       class="flex items-center justify-center gap-2.5 w-full bg-pustina-copper hover:bg-pustina-copperHover active:scale-[0.99] text-white font-semibold py-3.5 px-5 rounded-xl transition shadow-lg shadow-pustina-copper/20 cursor-pointer">
@@ -227,7 +223,7 @@
           </div>
         </div>
 
-        <!-- Samostatná karta TÝM SERVERU -->
+        <!-- TÝM SERVERU CZ/SK PUSTINA (4 samostatné karty) -->
         <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-7">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5">
             <div>
@@ -270,7 +266,7 @@
                   <i class="fa-solid fa-user-shield text-lg"></i>
                 </div>
                 <div>
-                  <span class="text-xs uppercase tracking-wider text-pustina-ice font-semibold block">Hlavní Admin</span>
+                  <span class="text-xs uppercase tracking-wider text-pustina-ice font-semibold block">hlavní Admin</span>
                   <p class="font-display font-bold text-xl text-white leading-tight">IceBreaker97</p>
                 </div>
               </div>
@@ -346,10 +342,11 @@
           </div>
         </div>
 
-        <!-- Rychlé rozcestníky kategorií -->
+        <!-- Rychlé rozcestníky kategorií (7 čistých karet) -->
         <div>
           <h2 class="font-display font-bold text-2xl text-white mb-4">Kategorie serveru</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- 1. Herní pomocník & tipy -->
             <a href="#pomocnik" data-nav="pomocnik" class="bg-pustina-card hover:bg-pustina-panel border border-pustina-border hover:border-pustina-amber/60 rounded-2xl p-5 transition group">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-pustina-amber font-semibold text-sm"><i class="fa-solid fa-book-open mr-1.5"></i>Průvodce & Návody</span>
@@ -359,6 +356,7 @@
               <p class="text-xs sm:text-sm text-gray-400">Přehled herních mechanik a návodů: AI konvoje, těžba, AI event lokace, hádanky a crafty.</p>
             </a>
 
+            <!-- 2. Novinky & Mechaniky -->
             <a href="#novinky" data-nav="novinky" class="bg-pustina-card hover:bg-pustina-panel border border-pustina-border hover:border-pustina-copper/60 rounded-2xl p-5 transition group">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-pustina-copper font-semibold text-sm"><i class="fa-solid fa-gears mr-1.5"></i>Mechaniky</span>
@@ -368,6 +366,7 @@
               <p class="text-xs sm:text-sm text-gray-400">Virtuální garáže s PINem, hráčský bazar v Otmelu, solární napájení a body bags.</p>
             </a>
 
+            <!-- 3. Obchod a bazar -->
             <a href="#obchod" data-nav="obchod" class="bg-pustina-card hover:bg-pustina-panel border border-pustina-border hover:border-pustina-ice/60 rounded-2xl p-5 transition group">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-pustina-ice font-semibold text-sm"><i class="fa-solid fa-store mr-1.5"></i>Ekonomika</span>
@@ -377,6 +376,7 @@
               <p class="text-xs sm:text-sm text-gray-400">Obchodní zóny Otmel, Romashka a Pobeda, pravidla hráčského bazaru a tipy.</p>
             </a>
 
+            <!-- 4. Hodinové & Denní odměny -->
             <a href="#odmeny" data-nav="odmeny" class="bg-pustina-card hover:bg-pustina-panel border border-pustina-border hover:border-pustina-amber/60 rounded-2xl p-5 transition group">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-pustina-amber font-semibold text-sm"><i class="fa-solid fa-coins mr-1.5"></i>Playtime</span>
@@ -386,6 +386,7 @@
               <p class="text-xs sm:text-sm text-gray-400">Odměny za odehraný čas, denní streak, příkazy /claim a /odmena a kalkulačka.</p>
             </a>
 
+            <!-- 5. Pravidla & Stavba base -->
             <a href="#pravidla" data-nav="pravidla" class="bg-pustina-card hover:bg-pustina-panel border border-pustina-border hover:border-pustina-signal/60 rounded-2xl p-5 transition group">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-pustina-signal font-semibold text-sm"><i class="fa-solid fa-scale-balanced mr-1.5"></i>Férová hra</span>
@@ -395,6 +396,7 @@
               <p class="text-xs sm:text-sm text-gray-400">Limity staveb, zakázané zóny, zákaz zneužívání bugů a ochrana majetku.</p>
             </a>
 
+            <!-- 6. Podpora / Donate -->
             <a href="#podpora" data-nav="podpora" class="bg-pustina-card hover:bg-pustina-panel border border-pustina-border hover:border-pustina-ice/60 rounded-2xl p-5 transition group">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-pustina-ice font-semibold text-sm"><i class="fa-solid fa-heart mr-1.5"></i>Anti-Pay-to-Win</span>
@@ -404,7 +406,8 @@
               <p class="text-xs sm:text-sm text-gray-400">Dobrovolné příspěvky čistě na provoz serveru u Fakahedy bez herních výhod.</p>
             </a>
 
-            <a href="#pravni-info" data-nav="pravni-info" class="bg-pustina-card hover:bg-pustina-panel border border-pustina-border hover:border-gray-500 rounded-2xl p-5 transition group">
+            <!-- 7. Právní info & GDPR -->
+            <a href="#pravni-info" data-nav="pravni-info" class="bg-pustina-card hover:bg-pustina-panel border border-pustina-border hover:border-gray-400/60 rounded-2xl p-5 transition group">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-gray-300 font-semibold text-sm"><i class="fa-solid fa-file-shield mr-1.5"></i>Transparentnost</span>
                 <i class="fa-solid fa-arrow-right text-gray-400 group-hover:text-white group-hover:translate-x-1 transition"></i>
@@ -417,7 +420,7 @@
       </section>
 
       <!-- ========================================================= -->
-      <!-- 1B. HERNÍ POMOCNÍK & TIPY (#pomocnik)                     -->
+      <!-- 2. HERNÍ POMOCNÍK & TIPY (#pomocnik)                      -->
       <!-- ========================================================= -->
       <section id="view-pomocnik" data-view="pomocnik" class="page-view hidden space-y-6">
         <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8 space-y-4">
@@ -428,13 +431,13 @@
           </div>
           <h1 class="font-display font-bold text-3xl sm:text-5xl text-white">Herní pomocník & tipy</h1>
           <p class="text-sm sm:text-base text-gray-400 max-w-3xl">
-            Vyberte si ze seznamu témat níže pro zobrazení podrobného návodu a tipů ze serveru CZ/SK PUSTINA.
+            Vyberte si ze seznamu záložek níže pro zobrazení podrobného návodu a receptů ze serveru CZ/SK PUSTINA.
           </p>
 
-          <!-- Výběr kategorie v Herním pomocníkovi -->
+          <!-- 6 záložek v Herním pomocníkovi -->
           <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 pt-2">
             <button type="button" onclick="selectHelperTopic('konvoje')" data-helper-btn="konvoje"
-                    class="helper-topic-btn flex items-center justify-center gap-2 px-3 py-3 rounded-xl border text-xs sm:text-sm font-semibold transition cursor-pointer bg-pustina-copper border-pustina-copper text-white">
+                    class="helper-topic-btn flex items-center justify-center gap-2 px-3 py-3 rounded-xl border text-xs sm:text-sm font-semibold transition cursor-pointer bg-pustina-copper border-pustina-copper text-white shadow-lg shadow-pustina-copper/20">
               <i class="fa-solid fa-truck-monster"></i>
               <span>AI Konvoje</span>
             </button>
@@ -442,7 +445,7 @@
             <button type="button" onclick="selectHelperTopic('tezba')" data-helper-btn="tezba"
                     class="helper-topic-btn flex items-center justify-center gap-2 px-3 py-3 rounded-xl border text-xs sm:text-sm font-semibold transition cursor-pointer bg-pustina-card border-pustina-border text-gray-300 hover:text-white hover:border-pustina-ice/50">
               <i class="fa-solid fa-gem text-pustina-ice"></i>
-              <span>Těžba</span>
+              <span>Těžba & Suroviny</span>
             </button>
 
             <button type="button" onclick="selectHelperTopic('event-lokace')" data-helper-btn="event-lokace"
@@ -471,16 +474,25 @@
           </div>
         </div>
 
-        <!-- OBSAH TÉMATU 1: AI KONVOJE -->
+        <!-- ZÁLOŽKA 1: AI KONVOJE -->
         <div data-helper-panel="konvoje" class="helper-topic-panel space-y-6">
           <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8 space-y-4">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="px-3 py-1 rounded-full bg-pustina-amber/15 border border-pustina-amber/35 text-xs font-semibold uppercase tracking-wider text-pustina-amber">
-                <i class="fa-solid fa-truck-monster mr-1.5"></i>AI Konvoje
-              </span>
-              <span class="px-3 py-1 rounded-full bg-pustina-card border border-pustina-border text-xs font-semibold text-gray-300">
-                Spouští se náhodně během hraní
-              </span>
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-pustina-amber/15 border border-pustina-amber/35 text-xs font-semibold uppercase tracking-wider text-pustina-amber">
+                  <i class="fa-solid fa-truck-monster mr-1.5"></i>AI Konvoje
+                </span>
+                <span class="px-3 py-1 rounded-full bg-pustina-card border border-pustina-border text-xs font-semibold text-gray-300">
+                  Spouští se náhodně během hraní
+                </span>
+              </div>
+
+              <a href="https://discord.com/channels/1198720522259804220/1555614768348528700" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2 bg-[#5865F2] hover:bg-[#4752C4] text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition shadow-md">
+                <i class="fa-brands fa-discord text-base"></i>
+                <span>Oznámení AI konvojů na Discordu</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-85"></i>
+              </a>
             </div>
 
             <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">AI Konvoje – Zásobovací trasy</h2>
@@ -489,9 +501,7 @@
               <p>
                 Po rozpadu běžného zásobování se většina cest stala prakticky nepoužitelnou. Přesto existují skupiny, které stále dokážou přesouvat větší množství materiálu mezi svými základnami, sklady a předsunutými stanovišti.
               </p>
-              <p class="text-white font-semibold">
-                Jejich zásoby se nepřemisťují samy.
-              </p>
+              <p class="text-white font-semibold">Jejich zásoby se nepřemisťují samy.</p>
               <p>
                 Po mapě se proto pohybují ozbrojené AI konvoje, které převážejí zásoby mezi určenými lokacemi. Mohou transportovat potraviny, léky, munici, zbraně, vojenský materiál, náhradní díly nebo jiný vzácný náklad. Každý konvoj má svoji trasu, cíl a úroveň ochrany.
               </p>
@@ -505,7 +515,6 @@
             </div>
           </div>
 
-          <!-- Zpráva pro přeživší & Taktický postup -->
           <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-pustina-border pb-3">
               <h3 class="font-display font-bold text-2xl text-white">
@@ -516,9 +525,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 text-sm text-gray-300 leading-relaxed">
               <div class="space-y-2.5">
-                <p>
-                  Zachycené rádiové přenosy potvrzují, že konvoje pravidelně vyrážejí ze zásobovacích bodů a převážejí náklad mezi určenými lokacemi.
-                </p>
+                <p>Zachycené rádiové přenosy potvrzují, že konvoje pravidelně vyrážejí ze zásobovacích bodů a převážejí náklad mezi určenými lokacemi.</p>
                 <ul class="space-y-1.5 text-gray-300">
                   <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border">• Některé trasy vedou ke skladům.</li>
                   <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border">• Jiné k vojenským základnám.</li>
@@ -543,7 +550,6 @@
             </div>
           </div>
 
-          <!-- 4 úrovně konvojů -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
             <!-- Úroveň I -->
             <article class="bg-pustina-card border border-emerald-500/40 rounded-2xl p-6 space-y-3.5">
@@ -553,27 +559,15 @@
                 </span>
                 <span class="text-xs font-mono text-emerald-300 font-semibold">Riziko: Nízké</span>
               </div>
-
-              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ I – LEHKÝ KONVOJ</h3>
-
+              <h4 class="font-display font-bold text-2xl text-white">ÚROVEŇ I – LEHKÝ KONVOJ</h4>
               <div class="flex flex-wrap gap-2 text-xs font-semibold">
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">
-                  <i class="fa-solid fa-car-side mr-1.5"></i>1 vozidlo
-                </span>
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white">
-                  <i class="fa-solid fa-user-secret mr-1.5"></i>2 ozbrojené AI
-                </span>
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-amber font-mono">
-                  Obtížnost: ★☆☆☆☆
-                </span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice"><i class="fa-solid fa-car-side mr-1.5"></i>1 vozidlo</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white"><i class="fa-solid fa-user-secret mr-1.5"></i>2 ozbrojené AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-amber font-mono">Obtížnost: ★☆☆☆☆</span>
               </div>
-
-              <p class="text-sm text-gray-300 leading-relaxed">
-                Menší zásobovací jednotky používané především pro přepravu běžného materiálu mezi méně významnými stanovišti. Jejich ochrana není příliš početná, ale ani tento konvoj není radno podceňovat.
-              </p>
-
+              <p class="text-sm text-gray-300 leading-relaxed">Menší zásobovací jednotky používané především pro přepravu běžného materiálu mezi méně významnými stanovišti. Jejich ochrana není příliš početná, ale ani tento konvoj není radno podceňovat.</p>
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-3.5 text-xs sm:text-sm text-gray-300">
-                <strong class="text-white">Předpokládaný náklad:</strong> <span>běžné zásoby, potraviny, základní léky, menší množství munice a vybavení.</span>
+                <strong class="text-white">Předpokládaný náklad:</strong> běžné zásoby, potraviny, základní léky, menší množství munice a vybavení.
               </div>
             </article>
 
@@ -585,27 +579,15 @@
                 </span>
                 <span class="text-xs font-mono text-yellow-300 font-semibold">Riziko: Střední</span>
               </div>
-
-              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ II – STŘEDNÍ KONVOJ</h3>
-
+              <h4 class="font-display font-bold text-2xl text-white">ÚROVEŇ II – STŘEDNÍ KONVOJ</h4>
               <div class="flex flex-wrap gap-2 text-xs font-semibold">
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">
-                  <i class="fa-solid fa-truck-pickup mr-1.5"></i>2 vozidla
-                </span>
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white">
-                  <i class="fa-solid fa-users mr-1.5"></i>4 ozbrojené AI
-                </span>
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-amber font-mono">
-                  Obtížnost: ★★☆☆☆
-                </span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice"><i class="fa-solid fa-truck-pickup mr-1.5"></i>2 vozidla</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white"><i class="fa-solid fa-users mr-1.5"></i>4 ozbrojené AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-amber font-mono">Obtížnost: ★★☆☆☆</span>
               </div>
-
-              <p class="text-sm text-gray-300 leading-relaxed">
-                Tyto konvoje už převážejí materiál, jehož ztráta by mohla mít dopad na zásobování okolních stanovišť. Proto mají silnější doprovod a jejich přepadení vyžaduje lepší přípravu.
-              </p>
-
+              <p class="text-sm text-gray-300 leading-relaxed">Tyto konvoje už převážejí materiál, jehož ztráta by mohla mít dopad na zásobování okolních stanovišť. Proto mají silnější doprovod a jejich přepadení vyžaduje lepší přípravu.</p>
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-3.5 text-xs sm:text-sm text-gray-300">
-                <strong class="text-white">Předpokládaný náklad:</strong> <span>zdravotnický materiál, munice, kvalitnější vybavení, náhradní díly a vojenské zásoby.</span>
+                <strong class="text-white">Předpokládaný náklad:</strong> zdravotnický materiál, munice, kvalitnější vybavení, náhradní díly a vojenské zásoby.
               </div>
             </article>
 
@@ -617,27 +599,15 @@
                 </span>
                 <span class="text-xs font-mono text-orange-300 font-semibold">Riziko: Vysoké</span>
               </div>
-
-              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ III – TĚŽKÝ KONVOJ</h3>
-
+              <h4 class="font-display font-bold text-2xl text-white">ÚROVEŇ III – TĚŽKÝ KONVOJ</h4>
               <div class="flex flex-wrap gap-2 text-xs font-semibold">
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">
-                  <i class="fa-solid fa-truck-moving mr-1.5"></i>3 vozidla
-                </span>
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white">
-                  <i class="fa-solid fa-user-shield mr-1.5"></i>8 ozbrojených AI
-                </span>
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-amber font-mono">
-                  Obtížnost: ★★★☆☆
-                </span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice"><i class="fa-solid fa-truck-moving mr-1.5"></i>3 vozidla</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white"><i class="fa-solid fa-user-shield mr-1.5"></i>8 ozbrojených AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-amber font-mono">Obtížnost: ★★★☆☆</span>
               </div>
-
-              <p class="text-sm text-gray-300 leading-relaxed">
-                Silně chráněné transporty určené pro přesun strategických zásob. Tyto jednotky jsou vysílány pouze tehdy, když má náklad vysokou hodnotu. Doprovod je početný a připravený reagovat na jakýkoliv útok. Pokusit se takový konvoj zastavit bez přípravy může skončit velmi rychle.
-              </p>
-
+              <p class="text-sm text-gray-300 leading-relaxed">Silně chráněné transporty určené pro přesun strategických zásob. Tyto jednotky jsou vysílány pouze tehdy, když má náklad vysokou hodnotu. Doprovod je početný a připravený reagovat na jakýkoliv útok.</p>
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-3.5 text-xs sm:text-sm text-gray-300">
-                <strong class="text-white">Předpokládaný náklad:</strong> <span>kvalitní zbraně, větší množství munice, vojenské vybavení, vzácné léky a strategické zásoby.</span>
+                <strong class="text-white">Předpokládaný náklad:</strong> kvalitní zbraně, větší množství munice, vojenské vybavení, vzácné léky a strategické zásoby.
               </div>
             </article>
 
@@ -649,42 +619,29 @@
                 </span>
                 <span class="text-xs font-mono text-red-300 font-semibold">Riziko: Extrémní</span>
               </div>
-
-              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ IV – STRATEGICKÝ KONVOJ</h3>
-
+              <h4 class="font-display font-bold text-2xl text-white">ÚROVEŇ IV – STRATEGICKÝ KONVOJ</h4>
               <div class="flex flex-wrap gap-2 text-xs font-semibold">
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">
-                  <i class="fa-solid fa-shield-halved mr-1.5"></i>4 vozidla
-                </span>
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-red-300">
-                  <i class="fa-solid fa-skull-crossbones mr-1.5"></i>12 elitních AI
-                </span>
-                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-amber font-mono">
-                  Obtížnost: ★★★★☆
-                </span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice"><i class="fa-solid fa-shield-halved mr-1.5"></i>4 vozidla</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-red-300"><i class="fa-solid fa-skull-crossbones mr-1.5"></i>12 elitních AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-amber font-mono">Obtížnost: ★★★★☆</span>
               </div>
-
-              <p class="text-sm text-gray-300 leading-relaxed">
-                Nejdůležitější transporty, které se na území pohybují. Jejich trasy jsou využívány k přesunu materiálu mezi nejvýznamnějšími základnami a sklady. Náklad těchto konvojů má takovou hodnotu, že jeho ochrana dostává nejvyšší prioritu. Pokud jeden z těchto transportů zahlédnete, počítejte s tvrdým odporem.
-              </p>
-
+              <p class="text-sm text-gray-300 leading-relaxed">Nejdůležitější transporty, které se na území pohybují. Jejich trasy jsou využívány k přesunu materiálu mezi nejvýznamnějšími základnami a sklady. Pokud jeden z těchto transportů zahlédnete, počítejte s tvrdým odporem.</p>
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-3.5 text-xs sm:text-sm text-gray-300">
-                <strong class="text-white">Předpokládaný náklad:</strong> <span>nejvzácnější vojenské vybavení, špičkové zbraně, velké zásoby munice a další strategický materiál.</span>
+                <strong class="text-white">Předpokládaný náklad:</strong> nejvzácnější vojenské vybavení, špičkové zbraně, velké zásoby munice a další strategický materiál.
               </div>
             </article>
           </div>
         </div>
 
-        <!-- OBSAH TÉMATU 2: TĚŽBA (bez kalkulačky těžby) -->
+        <!-- ZÁLOŽKA 2: TĚŽBA & SUROVINY -->
         <div data-helper-panel="tezba" class="helper-topic-panel hidden space-y-6">
-          <!-- Úvod & Lokality dolů -->
           <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8 space-y-4">
             <div class="flex flex-wrap items-center gap-2">
               <span class="px-3 py-1 rounded-full bg-pustina-ice/15 border border-pustina-ice/35 text-xs font-semibold uppercase tracking-wider text-pustina-ice">
                 <i class="fa-solid fa-gem mr-1.5"></i>Těžba surovin & Výkup u Horníka
               </span>
               <span class="px-3 py-1 rounded-full bg-pustina-card border border-pustina-border text-xs font-semibold text-gray-300">
-                Výroba v ruce bez kovadliny i pece
+                Výroba speciálních a fusion barů v ruce
               </span>
             </div>
 
@@ -731,11 +688,11 @@
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
             <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-4">
               <h3 class="font-display font-bold text-2xl text-white">
-                <i class="fa-solid fa-pickaxe text-pustina-copper mr-2"></i>Jak těžit a šance
+                <i class="fa-solid fa-hammer text-pustina-copper mr-2"></i>Jak těžit a šance
               </h3>
               <ol class="space-y-2 text-sm text-gray-300 list-decimal list-inside">
                 <li>Najdi těžitelný uzel v jeskyni či hoře.</li>
-                <li>Přistup k uzlu s krumpáčem v ruce a začni kopat.</li>
+                <li>Přistup k uzlu s krumpáčem (nebo sbíječkou) v ruce a začni kopat.</li>
               </ol>
               <div class="bg-amber-500/10 border border-amber-500/35 rounded-xl p-3.5 text-xs sm:text-sm font-semibold text-amber-200">
                 ❗ Každý uzel lze vytěžit max 6×.
@@ -765,7 +722,7 @@
             </div>
           </div>
 
-          <!-- Kity a vybavení pro těžbu (Horník Pobeda, craft v ruce, loot ve světě) -->
+          <!-- Kity a vybavení pro těžbu -->
           <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-5">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-pustina-border pb-3">
               <h3 class="font-display font-bold text-2xl text-white">
@@ -773,46 +730,40 @@
               </h3>
               <span class="text-xs font-semibold text-pustina-ice">Základní stavební kameny systému</span>
             </div>
-            <p class="text-xs sm:text-sm text-gray-300">
-              Kity jsou základní stavební kameny těžebního systému – bez nich nemůžete zpracovávat vytěžené suroviny.
-            </p>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs sm:text-sm text-gray-300">
-              <!-- Koupě u Horníka -->
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 space-y-2">
                 <p class="font-bold text-white">🛒 Co koupit u obchodníka Horník (Pobeda):</p>
                 <ul class="space-y-1.5 font-mono text-xs">
                   <li>• <strong>Smelting Furnace Kit (Pec):</strong> <span class="text-pustina-signal">10 000 Kč</span></li>
                   <li>• <strong>Crafting Anvil Kit (Kovadlina):</strong> <span class="text-pustina-signal">10 000 Kč</span></li>
                   <li>• <strong>Grinding Stone Kit (Bruska):</strong> <span class="text-pustina-signal">8 000 Kč</span></li>
-                  <li>• <strong>Propane Connection Pipe (Hadice na přívod paliva pro pec):</strong> <span class="text-pustina-signal">1 000 Kč</span></li>
-                  <li>• <strong>Propane Gas Canister (Palivová bomba pro pec):</strong> <span class="text-pustina-signal">20 000 Kč</span></li>
+                  <li>• <strong>Propane Connection Pipe (Hadice):</strong> <span class="text-pustina-signal">1 000 Kč</span></li>
+                  <li>• <strong>Propane Gas Canister (Palivová bomba):</strong> <span class="text-pustina-signal">20 000 Kč</span></li>
                 </ul>
               </div>
 
-              <!-- Vlastní výroba kitů -->
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 space-y-2">
                 <p class="font-bold text-white">🔧 Alternativa – vlastní výroba kitů (v ruce):</p>
                 <ul class="space-y-1.5 text-xs">
                   <li>• <strong>Smelting Furnace Kit (Pec):</strong> 5× Prkno + 5× Plech</li>
-                  <li>• <strong>Crafting Anvil Kit (Kovadlina):</strong> 1× Iron ore (surové železo) + 3× Prkno</li>
+                  <li>• <strong>Crafting Anvil Kit (Kovadlina):</strong> 1× Iron ore + 3× Prkno</li>
                   <li>• <strong>Grinding Stone Kit (Bruska):</strong> 1× Balvan + 3× Prkno</li>
-                  <li class="pt-1 border-t border-pustina-border">• <strong>Wooden Crate / Dřevěná bedna:</strong> nutný u každé stanice jako úložiště (Craft: 8× prkno + 16× Hřebík)</li>
+                  <li class="pt-1 border-t border-pustina-border">• <strong>Wooden Crate / Dřevěná bedna:</strong> nutná u každé stanice jako úložiště (8× prkno + 16× hřebík)</li>
                 </ul>
               </div>
 
-              <!-- Co najít ve světě -->
               <div class="bg-pustina-panel border border-amber-500/35 rounded-xl p-4 space-y-2">
                 <p class="font-bold text-amber-300">🔍 Co musíš najít ve světě (nelze koupit):</p>
                 <ul class="space-y-2 text-xs">
-                  <li>• <strong>Blacksmith's Hammer (Kladivo):</strong> nutný pro kovadlinu (bez něj se nedají zpracovávat roztavené nuggety).</li>
-                  <li>• <strong>GrindingStoneWheel (Brusné kolo):</strong> nutný pro brusný kámen.</li>
+                  <li>• <strong>Blacksmith's Hammer (Kladivo):</strong> nutné pro kovadlinu ke zpracování roztavených nuggetů.</li>
+                  <li>• <strong>GrindingStoneWheel (Brusné kolo):</strong> nutné pro brusný kámen.</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <!-- Zpracování surovin (Pec, Kovadlina, Bruska) -->
+          <!-- Zpracování surovin -->
           <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-5">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-pustina-border pb-3">
               <h3 class="font-display font-bold text-2xl text-white">
@@ -822,76 +773,61 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs sm:text-sm text-gray-300">
-              <!-- Tavení v peci -->
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 space-y-2.5">
                 <p class="font-bold text-base text-white">🔥 Tavení – Smelting Furnace (Pec)</p>
                 <p class="italic text-pustina-amber font-semibold">1× Ruda / Ore = 1× nugget / slitek</p>
                 <ol class="space-y-1 list-decimal list-inside text-xs">
-                  <li>Vlož do Pece dřevěnou bednu + láhev s palivem a kovovou hadici.</li>
+                  <li>Vlož do pece dřevěnou bednu + láhev s palivem a kovovou hadici.</li>
                   <li>Vlož příslušné Ore do správných slotů.</li>
-                  <li>Zapni pec.</li>
-                  <li>Pec začne automaticky tavit.</li>
+                  <li>Zapni pec a nech automaticky tavit.</li>
                 </ol>
                 <p class="text-xs bg-pustina-card p-2.5 rounded-lg border border-pustina-border text-gray-300">
                   ⛽ Láhev s palivem se doplňuje benzínovým kanystrem (vytáhni z pece a dolij palivo).
                 </p>
               </div>
 
-              <!-- Výroba plátů/cihel na kovadlině -->
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 space-y-2.5">
-                <p class="font-bold text-base text-white">⚒️ Výroba plátů/cihel – Crafting Anvil (Kovadlina)</p>
+                <p class="font-bold text-base text-white">⚒️ Výroba cihel – Crafting Anvil (Kovadlina)</p>
                 <ol class="space-y-1 list-decimal list-inside text-xs">
-                  <li>Po vytavení vezmi 10× nugget DO RUKY.</li>
-                  <li>Přistup ke kovadlině (vyžaduje speciální kladivo).</li>
+                  <li>Vezmi 10× nugget DO RUKY.</li>
+                  <li>Přistup ke kovadlině (vyžaduje kladivo).</li>
                   <li>Vyrob Cihlu / Bar.</li>
                 </ol>
                 <div class="text-xs space-y-1 bg-pustina-card p-2.5 rounded-lg border border-pustina-border font-mono">
-                  <p class="font-sans font-semibold text-white mb-1">10× nugget = 1× Bar:</p>
                   <p>10× Copper Nugget = Copper Bar</p>
                   <p>10× Iron Nugget = Iron Bar</p>
                   <p>10× Tin Nugget = Tin Bar</p>
                   <p>10× Silver Nugget = Silver Bar</p>
                   <p>10× Gold Nugget = Gold Bar</p>
                   <p>10× Uranium Nugget = Uranium Bar</p>
-                  <p>10× Refined Sulphur = Sulphur Powder (Sírový prášek)</p>
+                  <p>10× Refined Sulphur = Sulphur Powder</p>
                 </div>
               </div>
 
-              <!-- Broušení gemů -->
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 space-y-2.5">
                 <p class="font-bold text-base text-white">💎 Broušení gemů – Grinding Stone (Bruska)</p>
                 <p class="italic text-pustina-ice font-semibold">Surový gem = Broušený gem</p>
                 <ol class="space-y-1 list-decimal list-inside text-xs">
-                  <li>Vlož surový gem do ruky.</li>
-                  <li>Spusť brusný kámen.</li>
-                  <li>Výsledek je náhodný!</li>
+                  <li>Vlož surový gem do ruky a spusť brusku.</li>
+                  <li>Kvalita: Flawed (50 %) / Standard (35 %) / Perfect (15 %).</li>
                 </ol>
-                <div class="text-xs bg-pustina-card p-2.5 rounded-lg border border-pustina-border space-y-1 font-mono">
-                  <p class="font-sans font-semibold text-white">Kvalita / Šance:</p>
-                  <p>Flawed / 50 %</p>
-                  <p>Standard / 35 %</p>
-                  <p>Perfect / 15 %</p>
-                </div>
                 <div class="text-xs bg-pustina-card p-2.5 rounded-lg border border-pustina-signal/30 space-y-1 font-mono">
                   <p class="font-sans font-semibold text-pustina-signal">Vylepšení kvality (v ruce):</p>
-                  <p>2× + 1× Flawed = 1× Standard</p>
-                  <p>2× + 1× Standard = 1× Perfect</p>
+                  <p>3× Flawed = 1× Standard</p>
+                  <p>3× Standard = 1× Perfect</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Speciální bary (výroba v ruce + výkup u Horníka) -->
+          <!-- Speciální bary -->
           <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-pustina-border pb-3">
               <h3 class="font-display font-bold text-2xl text-white">
-                <i class="fa-solid fa-sack-dollar text-pustina-amber mr-2"></i>Speciální bary (bez kovadliny i pece)
+                <i class="fa-solid fa-sack-dollar text-pustina-amber mr-2"></i>Speciální bary (výroba v ruce + výkup u Horníka)
               </h3>
-              <span class="text-xs font-semibold text-pustina-signal">Výroba kombinací v ruce</span>
+              <span class="text-xs font-semibold text-pustina-signal">Bez kovadliny i pece</span>
             </div>
-            <p class="text-xs sm:text-sm text-gray-300">
-              Speciální bary se vyrábějí přímo kombinací v ruce – nepotřebujete kovadlinu ani pec.
-            </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 space-y-2 text-gray-300">
                 <p class="font-semibold text-white">Recepty výroby (vždy v ruce):</p>
@@ -912,7 +848,7 @@
             </div>
           </div>
 
-          <!-- Fusion bary – Tier systém (Tier 1 až Tier 6) -->
+          <!-- Fusion bary – Tier 1 až Tier 6 -->
           <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-5">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-pustina-border pb-3">
               <h3 class="font-display font-bold text-2xl text-white">
@@ -920,12 +856,8 @@
               </h3>
               <span class="text-xs font-mono text-pustina-ice">Kombinace v ruce</span>
             </div>
-            <p class="text-xs sm:text-sm text-gray-300">
-              Fusion bary se rovněž vyrábějí kombinací v ruce – žádná kovadlina ani pec.
-            </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-gray-300">
-              <!-- Tier 1 -->
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 space-y-2">
                 <p class="font-bold text-sm text-white">🔹 Tier 1 – Flawed Fusion Bars</p>
                 <p class="italic text-pustina-ice">1× základní Bar + 10× Flawed gem</p>
@@ -941,69 +873,60 @@
                 </ul>
               </div>
 
-              <!-- Tier 2 -->
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 space-y-2">
                 <p class="font-bold text-sm text-white">🔸 Tier 2 – Standard Fusion Bars</p>
                 <p class="italic text-pustina-amber">2× Flawed Bar + 5× Standard gem</p>
                 <ul class="space-y-1">
-                  <li>• <strong>Bronze Standard</strong> = 2× Bronze Flawed Bar + 5× Amber Standard Gem</li>
-                  <li>• <strong>Steel Standard</strong> = 2× Steel Flawed Bar + 5× Jade Standard Gem</li>
-                  <li>• <strong>Electrum Standard</strong> = 2× Electrum Flawed Bar + 5× Aquamarine Standard Gem</li>
-                  <li>• <strong>Composite Standard</strong> = 2× Composite Flawed Bar + 5× Iolite Standard Gem</li>
-                  <li>• <strong>Crystal Standard</strong> = 2× Crystal Flawed Bar + 5× Fancy Colour Diamond Standard Gem</li>
-                  <li>• <strong>Prismatic Standard</strong> = 2× Prismatic Flawed Bar + 5× Turquoise Standard Gem</li>
-                  <li>• <strong>Void Standard</strong> = 2× Void Flawed Bar + 5× Amethyst Standard Gem</li>
-                  <li>• <strong>Ruby Standard</strong> = 2× Ruby Flawed Bar + 5× Ruby Standard Gem</li>
+                  <li>• <strong>Bronze Standard</strong> = 2× Bronze Flawed + 5× Amber Standard</li>
+                  <li>• <strong>Steel Standard</strong> = 2× Steel Flawed + 5× Jade Standard</li>
+                  <li>• <strong>Electrum Standard</strong> = 2× Electrum Flawed + 5× Aquamarine Standard</li>
+                  <li>• <strong>Composite Standard</strong> = 2× Composite Flawed + 5× Iolite Standard</li>
+                  <li>• <strong>Crystal Standard</strong> = 2× Crystal Flawed + 5× Fancy Colour Diamond Standard</li>
+                  <li>• <strong>Prismatic Standard</strong> = 2× Prismatic Flawed + 5× Turquoise Standard</li>
+                  <li>• <strong>Void Standard</strong> = 2× Void Flawed + 5× Amethyst Standard</li>
+                  <li>• <strong>Ruby Standard</strong> = 2× Ruby Flawed + 5× Ruby Standard</li>
                 </ul>
               </div>
 
-              <!-- Tier 3 -->
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 space-y-2">
                 <p class="font-bold text-sm text-white">💎 Tier 3 – Perfect Fusion Bars</p>
                 <p class="italic text-pustina-signal">3× Standard Bar + 2× Perfect gem</p>
                 <ul class="space-y-1">
-                  <li>• <strong>Bronze Perfect</strong> = 3× Bronze Standard Bar + 2× Amber Perfect Gem</li>
-                  <li>• <strong>Steel Perfect</strong> = 3× Steel Standard Bar + 2× Jade Perfect Gem</li>
-                  <li>• <strong>Electrum Perfect</strong> = 3× Electrum Standard Bar + 2× Aquamarine Perfect Gem</li>
-                  <li>• <strong>Composite Perfect</strong> = 3× Composite Standard Bar + 2× Iolite Perfect Gem</li>
-                  <li>• <strong>Crystal Perfect</strong> = 3× Crystal Standard Bar + 2× Fancy Colour Diamond Perfect Gem</li>
-                  <li>• <strong>Prismatic Perfect</strong> = 3× Prismatic Standard Bar + 2× Turquoise Perfect Gem</li>
-                  <li>• <strong>Void Perfect</strong> = 3× Void Standard Bar + 2× Amethyst Perfect Gem</li>
-                  <li>• <strong>Ruby Perfect</strong> = 3× Ruby Standard Bar + 2× Ruby Perfect Gem</li>
+                  <li>• <strong>Bronze Perfect</strong> = 3× Bronze Standard + 2× Amber Perfect</li>
+                  <li>• <strong>Steel Perfect</strong> = 3× Steel Standard + 2× Jade Perfect</li>
+                  <li>• <strong>Electrum Perfect</strong> = 3× Electrum Standard + 2× Aquamarine Perfect</li>
+                  <li>• <strong>Composite Perfect</strong> = 3× Composite Standard + 2× Iolite Perfect</li>
+                  <li>• <strong>Crystal Perfect</strong> = 3× Crystal Standard + 2× Fancy Colour Diamond Perfect</li>
+                  <li>• <strong>Prismatic Perfect</strong> = 3× Prismatic Standard + 2× Turquoise Perfect</li>
+                  <li>• <strong>Void Perfect</strong> = 3× Void Standard + 2× Amethyst Perfect</li>
+                  <li>• <strong>Ruby Perfect</strong> = 3× Ruby Standard + 2× Ruby Perfect</li>
                 </ul>
               </div>
 
-              <!-- Tier 4 -->
               <div class="bg-pustina-panel border border-amber-500/35 rounded-xl p-4 space-y-2">
                 <p class="font-bold text-sm text-amber-300">🌟 Tier 4 – Legendary Bars</p>
-                <p class="italic text-gray-400">2× specific Perfect Bars</p>
                 <ul class="space-y-1">
-                  <li>• <strong>Ascendant Bar</strong> = Void Perfect Bar + Prismatic Perfect Bar</li>
-                  <li>• <strong>Titanforge Bar</strong> = Steel Perfect Bar + Ruby Perfect Bar</li>
-                  <li>• <strong>Infinity Bar</strong> = Bronze Perfect Bar + Composite Perfect Bar</li>
-                  <li>• <strong>Celestial Bar</strong> = Electrum Perfect Bar + Crystal Perfect Bar</li>
+                  <li>• <strong>Ascendant Bar</strong> = Void Perfect + Prismatic Perfect</li>
+                  <li>• <strong>Titanforge Bar</strong> = Steel Perfect + Ruby Perfect</li>
+                  <li>• <strong>Infinity Bar</strong> = Bronze Perfect + Composite Perfect</li>
+                  <li>• <strong>Celestial Bar</strong> = Electrum Perfect + Crystal Perfect</li>
                 </ul>
               </div>
 
-              <!-- Tier 5 -->
               <div class="bg-pustina-panel border border-red-500/35 rounded-xl p-4 space-y-2">
                 <p class="font-bold text-sm text-red-300">🩸 Tier 5 – Mythic Bars</p>
-                <p class="italic text-gray-400">2× Legendary Bars</p>
                 <ul class="space-y-1">
                   <li>• <strong>Voidsteel Bar</strong> = Ascendant Bar + Titanforge Bar</li>
                   <li>• <strong>Bloodmetal Bar</strong> = Celestial Bar + Infinity Bar</li>
                 </ul>
               </div>
 
-              <!-- Tier 6 -->
               <div class="bg-pustina-panel border border-pustina-copper/50 rounded-xl p-4 space-y-2">
                 <p class="font-bold text-sm text-pustina-copper">⚡ Tier 6 – NEXUS BAR</p>
-                <p class="italic text-gray-400">2× Mythic Bars</p>
                 <p>• <strong>Nexus Bar</strong> = Voidsteel Bar + Bloodmetal Bar</p>
               </div>
             </div>
 
-            <!-- Ceník Fusion Barů u Horníka -->
             <div class="bg-pustina-panel border border-pustina-signal/35 rounded-xl p-4 space-y-2 text-xs sm:text-sm font-mono">
               <p class="font-sans font-semibold text-pustina-signal">💰 Prodejní ceny Fusion Barů u Horníka:</p>
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-gray-200">
@@ -1022,47 +945,326 @@
           </div>
         </div>
 
-        <!-- OBSAH TÉMATU 3: AI EVENT LOKACE -->
-        <div data-helper-panel="event-lokace" class="helper-topic-panel hidden space-y-5">
-          <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8 space-y-3">
-            <span class="px-3 py-1 rounded-full bg-pustina-amber/15 border border-pustina-amber/35 text-xs font-semibold uppercase tracking-wider text-pustina-amber">
-              <i class="fa-solid fa-crosshairs mr-1.5"></i>Dynamické AI události
-            </span>
-            <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">AI Event lokace</h2>
-            <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-3xl">
-              Po mapě Chernarus se nepravidelně aktivují střežené AI lokace s hodnotným vojenským vybavením a speciálními itemy. Hlášení o spuštění a ukončení události najdete v reálném čase na Discordu v kanálu <code class="text-pustina-signal">#event-ai-lokace</code>.
+        <!-- ZÁLOŽKA 3: AI EVENT LOKACE -->
+        <div data-helper-panel="event-lokace" class="helper-topic-panel hidden space-y-6">
+          <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8 space-y-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-pustina-amber/15 border border-pustina-amber/35 text-xs font-semibold uppercase tracking-wider text-pustina-amber">
+                <i class="fa-solid fa-crosshairs mr-1.5"></i>Dynamické AI události
+              </span>
+              <span class="px-3 py-1 rounded-full bg-pustina-card border border-pustina-border text-xs font-semibold text-gray-300">
+                8 úrovní obtížnosti • Náhodné spouštění
+              </span>
+            </div>
+
+            <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">AI Event lokace – Přehled úrovní & Průvodce</h2>
+            <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-4xl">
+              Po mapě Chernarus se během hraní náhodně aktivují střežené AI lokace v 8 úrovních obtížnosti. V oznámení vždy uvidíte přesnou oblast, obtížnost a celkový počet nepřátel včetně posil.
             </p>
+          </div>
+
+          <!-- Všech 8 úrovní AI Event lokací -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <!-- Úroveň I -->
+            <article class="bg-pustina-card border border-emerald-500/40 rounded-2xl p-6 space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-500/15 text-emerald-300 text-xs font-bold uppercase tracking-wider">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>Úroveň I • Lehká
+                </span>
+                <span class="text-xs font-mono text-pustina-amber font-semibold">Nebezpečí: ★☆☆☆☆</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ I – LEHKÁ</h3>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white"><i class="fa-solid fa-users mr-1.5 text-emerald-400"></i>7 ozbrojených AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-signal font-mono">Peníze: min. 60 000 Kč</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">Odměna: 24–30 náhodných předmětů</span>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed">Menší skupina nepřátel, vhodná také pro jednotlivce nebo méně vybavenou dvojici. Nepodceňujte posily ani možnost odstřelovače.</p>
+            </article>
+
+            <!-- Úroveň II -->
+            <article class="bg-pustina-card border border-emerald-500/40 rounded-2xl p-6 space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-500/15 text-emerald-300 text-xs font-bold uppercase tracking-wider">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>Úroveň II • Normální
+                </span>
+                <span class="text-xs font-mono text-pustina-amber font-semibold">Nebezpečí: ★★☆☆☆</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ II – NORMÁLNÍ</h3>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white"><i class="fa-solid fa-users mr-1.5 text-emerald-400"></i>8 ozbrojených AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-signal font-mono">Peníze: min. 65 000 Kč</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">Odměna: 28–34 náhodných předmětů</span>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed">Běžně chráněná zásobovací oblast. Nepřátelé hlídají okolí a během útoku se mohou pokusit hráče obejít.</p>
+            </article>
+
+            <!-- Úroveň III -->
+            <article class="bg-pustina-card border border-yellow-500/40 rounded-2xl p-6 space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-yellow-500/15 text-yellow-300 text-xs font-bold uppercase tracking-wider">
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>Úroveň III • Střední
+                </span>
+                <span class="text-xs font-mono text-pustina-amber font-semibold">Nebezpečí: ★★☆☆☆</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ III – STŘEDNÍ</h3>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white"><i class="fa-solid fa-users mr-1.5 text-yellow-400"></i>9 ozbrojených AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-signal font-mono">Peníze: min. 70 000 Kč</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">Odměna: 32–38 náhodných předmětů</span>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed">Početnější jednotka s lepším vybavením. Doporučujeme dostatek munice, lékařské zásoby a opatrný průzkum okolí.</p>
+            </article>
+
+            <!-- Úroveň IV -->
+            <article class="bg-pustina-card border border-yellow-500/40 rounded-2xl p-6 space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-yellow-500/15 text-yellow-300 text-xs font-bold uppercase tracking-wider">
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>Úroveň IV • Náročná
+                </span>
+                <span class="text-xs font-mono text-pustina-amber font-semibold">Nebezpečí: ★★★☆☆</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ IV – NÁROČNÁ</h3>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white"><i class="fa-solid fa-users mr-1.5 text-yellow-400"></i>10 ozbrojených AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-signal font-mono">Peníze: min. 75 000 Kč</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">Odměna: 36–42 náhodných předmětů</span>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed">Silnější obrana s větším zastoupením těžce vybavených nepřátel. Útok bez přípravy může rychle skončit neúspěchem.</p>
+            </article>
+
+            <!-- Úroveň V -->
+            <article class="bg-pustina-card border border-orange-500/45 rounded-2xl p-6 space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-orange-500/15 text-orange-300 text-xs font-bold uppercase tracking-wider">
+                  <span class="w-2.5 h-2.5 rounded-full bg-orange-400"></span>Úroveň V • Těžká
+                </span>
+                <span class="text-xs font-mono text-pustina-amber font-semibold">Nebezpečí: ★★★★☆</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ V – TĚŽKÁ</h3>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white"><i class="fa-solid fa-users mr-1.5 text-orange-400"></i>12 ozbrojených AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-signal font-mono">Peníze: min. 80 000 Kč</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">Odměna: 40–46 náhodných předmětů</span>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed">Dobře chráněná oblast s početnou posilou. Doporučujeme spolupráci několika hráčů a rozdělení rolí během útoku.</p>
+            </article>
+
+            <!-- Úroveň VI -->
+            <article class="bg-pustina-card border border-orange-500/45 rounded-2xl p-6 space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-orange-500/15 text-orange-300 text-xs font-bold uppercase tracking-wider">
+                  <span class="w-2.5 h-2.5 rounded-full bg-orange-400"></span>Úroveň VI • Velmi těžká
+                </span>
+                <span class="text-xs font-mono text-pustina-amber font-semibold">Nebezpečí: ★★★★☆</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ VI – VELMI TĚŽKÁ</h3>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white"><i class="fa-solid fa-users mr-1.5 text-orange-400"></i>13 ozbrojených AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-signal font-mono">Peníze: min. 85 000 Kč</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">Odměna: 44–50 náhodných předmětů</span>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed">Zkušená jednotka chránící hodnotné zásoby. Nepřátelé mohou útočit z několika směrů a jeden z nich může být odstřelovač.</p>
+            </article>
+
+            <!-- Úroveň VII -->
+            <article class="bg-pustina-card border border-red-500/50 rounded-2xl p-6 space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-red-500/15 text-red-300 text-xs font-bold uppercase tracking-wider">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>Úroveň VII • Extrémní
+                </span>
+                <span class="text-xs font-mono text-red-300 font-semibold">Nebezpečí: ★★★★★</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ VII – EXTRÉMNÍ</h3>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-white"><i class="fa-solid fa-skull mr-1.5 text-red-400"></i>15 ozbrojených AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-signal font-mono">Peníze: min. 90 000 Kč</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">Odměna: 48–54 náhodných předmětů</span>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed">Silně obsazená oblast určená pro dobře vybavenou skupinu. Počítejte s tvrdým odporem, posilami a velmi malým prostorem pro chyby.</p>
+            </article>
+
+            <!-- Úroveň VIII -->
+            <article class="bg-pustina-card border border-red-500/60 rounded-2xl p-6 space-y-3.5">
+              <div class="flex items-center justify-between gap-2">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-red-500/20 text-red-300 text-xs font-bold uppercase tracking-wider">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>Úroveň VIII • Pekelná
+                </span>
+                <span class="text-xs font-mono text-red-300 font-semibold">Nebezpečí: ★★★★★</span>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white">ÚROVEŇ VIII – PEKELNÁ</h3>
+              <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-red-200"><i class="fa-solid fa-skull-crossbones mr-1.5 text-red-400"></i>16 ozbrojených AI</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-signal font-mono">Peníze: min. 100 000 Kč</span>
+                <span class="px-3 py-1.5 rounded-lg bg-pustina-panel border border-pustina-border text-pustina-ice">Odměna: 52–58 náhodných předmětů</span>
+              </div>
+              <p class="text-sm text-gray-300 leading-relaxed">Nejnebezpečnější varianta eventu. Oblast chrání maximální počet nepřátel a útok vyžaduje dobrou výbavu, komunikaci a dostatek munice.</p>
+            </article>
+          </div>
+
+          <!-- Jak získat odměnu a co se stane s lootem -->
+          <div class="bg-pustina-panel border border-pustina-amber/40 rounded-2xl p-6 sm:p-8 space-y-6">
+            <div class="border-b border-pustina-border pb-4">
+              <span class="text-xs font-semibold uppercase tracking-widest text-pustina-amber">Průběh události & Pravidla odměn</span>
+              <h3 class="font-display font-bold text-2xl sm:text-4xl text-white mt-1">
+                ⚡ Jak získat odměnu a co se stane s lootem
+              </h3>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+              <div class="bg-pustina-card border border-pustina-border rounded-2xl p-5 space-y-3">
+                <h4 class="font-display font-bold text-xl text-white">
+                  <i class="fa-solid fa-broadcast-tower text-pustina-ice mr-2"></i>Spouštění je náhodné během hraní
+                </h4>
+                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                  Event byl vyhlášen a nepřátelé drží jednu z důležitých lokací. Připravte si zbraně, dostatek munice a vyrazte do označené oblasti.
+                </p>
+                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                  V oznámení uvidíte lokaci, obtížnost a celkový počet AI včetně posil. Nepřátelé jsou rozděleni do několika skupin a každá hlídá jinou část oblasti.
+                </p>
+                <div class="bg-amber-500/10 border border-amber-500/35 rounded-xl p-3 text-xs sm:text-sm font-semibold text-amber-200">
+                  ⚠️ Během boje mohou dorazit posily, takže ani po několika rychlých zásazích nemusí být vyhráno.
+                </div>
+                <p class="text-xs sm:text-sm text-gray-300">
+                  Hráči uvnitř eventové oblasti dostávají průběžné informace o tom, kolik AI už bylo zabito a kolik jich ještě zbývá.
+                </p>
+              </div>
+
+              <div class="bg-pustina-card border border-pustina-copper/45 rounded-2xl p-5 space-y-3">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <h4 class="font-display font-bold text-xl text-white">
+                    <i class="fa-solid fa-bolt text-pustina-amber mr-2"></i>Po vyčištění oblasti
+                  </h4>
+                  <span class="px-2.5 py-1 rounded-lg bg-pustina-ice/15 text-pustina-ice text-xs font-semibold">
+                    Povinná výbava: Kanystr s benzínem + zapalovací svíčka
+                  </span>
+                </div>
+                <p class="text-xs sm:text-sm text-white font-semibold">
+                  Zabitím posledního nepřítele event nekončí.
+                </p>
+                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                  V oblasti musíte nalézt <strong class="text-white">elektrocentrálu</strong>:
+                </p>
+                <ol class="space-y-1.5 text-xs sm:text-sm text-gray-200 list-decimal list-inside bg-pustina-panel p-3.5 rounded-xl border border-pustina-border">
+                  <li><strong>Doplnit benzín</strong></li>
+                  <li><strong>Vložit zapalovací svíčku</strong></li>
+                  <li><strong>Nastartovat</strong></li>
+                </ol>
+                <div class="bg-red-500/10 border border-red-500/35 rounded-xl p-3 text-xs sm:text-sm font-semibold text-red-200">
+                  ‼️ Teprve po spuštění centrály se objeví kontejner s odměnou. Bez funkční centrály se k zásobám nedostanete!
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+              <div class="bg-pustina-card border border-pustina-border rounded-2xl p-5 space-y-3">
+                <h4 class="font-display font-bold text-xl text-white">📦 Čas pro odměnu</h4>
+                <ol class="space-y-2 text-xs sm:text-sm text-gray-300 list-decimal list-inside">
+                  <li>Po nastartování centrály se automaticky spawne bedna s odměnou (<strong class="text-red-300">hledej červený kouř</strong>).</li>
+                  <li>Spawnutím bedny máte <strong class="text-white">+- 20 minut</strong> na sebrání odměn/lootu, který se poté automaticky smaže.</li>
+                </ol>
+              </div>
+
+              <div class="bg-pustina-card border border-red-500/35 rounded-2xl p-5 space-y-2.5">
+                <h4 class="font-display font-bold text-xl text-red-300">‼️ Při úklidu zmizí:</h4>
+                <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300">
+                  <li>• eventový kontejner,</li>
+                  <li>• předměty ponechané uvnitř,</li>
+                  <li>• odměny vyhozené volně na zem,</li>
+                  <li>• zbraně a vybavení ponechané u mrtvých AI,</li>
+                  <li>• všechno ostatní, co z eventu nikdo bezpečně neuložil.</li>
+                </ul>
+              </div>
+
+              <div class="bg-pustina-card border border-pustina-signal/35 rounded-2xl p-5 space-y-2.5">
+                <h4 class="font-display font-bold text-xl text-pustina-signal">🎒 Co vám zůstane?</h4>
+                <p class="text-xs text-gray-400">Systém ponechá věci, které jste skutečně vyzvedli nebo uložili:</p>
+                <ul class="space-y-1.5 text-xs sm:text-sm text-gray-300">
+                  <li>• předměty v inventáři,</li>
+                  <li>• věci uložené v batohu,</li>
+                  <li>• odměny přemístěné do vlastního sudu nebo bedny,</li>
+                  <li>• předměty uložené ve vozidle,</li>
+                  <li>• zbraně a výbava odebraná mrtvým AI.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-amber-500/10 border border-amber-500/35 rounded-xl p-4 text-xs sm:text-sm text-amber-200 font-semibold">
+              ⚠️ Pokud všechno neunesete, použijte vlastní úložiště nebo vozidlo. Nenechávejte cenné věci ležet na zemi s tím, že se pro ně později vrátíte – po úklidu už tam nebudou.
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div class="bg-pustina-card border border-pustina-border rounded-2xl p-5 space-y-2.5">
+                <h4 class="font-display font-bold text-xl text-white">🔧 Zbraně a vybavení</h4>
+                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                  Pokud odměna obsahuje zbraň s odnímatelným zásobníkem, systém k ní přidá <strong class="text-white">jeden kompatibilní zásobník</strong>.
+                </p>
+                <p class="text-xs sm:text-sm text-gray-300">
+                  Aby kontejner nebyl zaplněný stejným oblečením, může obsahovat maximálně:
+                </p>
+                <div class="grid grid-cols-2 gap-1.5 text-xs text-gray-200 bg-pustina-panel p-3 rounded-xl border border-pustina-border">
+                  <span>• jednu bundu</span>
+                  <span>• jedny kalhoty</span>
+                  <span>• jedny boty</span>
+                  <span>• jedny rukavice</span>
+                  <span>• jednu helmu</span>
+                  <span>• jednu vestu / plátový nosič</span>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <div class="bg-pustina-card border border-pustina-border rounded-2xl p-5 space-y-2">
+                  <h4 class="font-display font-bold text-xl text-white">💀 Co když během eventu zemřete?</h4>
+                  <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                    Smrtí hráče event nekončí. Pokud zbývá dostatek času, můžete se vrátit a pokračovat v boji. <strong class="text-white">Již zabité AI zůstávají započítané a znovu se neobjeví.</strong>
+                  </p>
+                </div>
+
+                <div class="bg-pustina-card border border-pustina-border rounded-2xl p-5 space-y-2">
+                  <h4 class="font-display font-bold text-xl text-white">⏳ Nenechte nepřátele uniknout se zásobami</h4>
+                  <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                    Na dokončení celého eventu máte maximálně <strong class="text-white">2 hodiny</strong>. Pokud ho nikdo včas nedokončí, nepřátelé zásoby odvezou, oblast se uzavře a odměnu už nebude možné získat. Jakmile se objeví ukončovací hlášení, nemá smysl do lokace pokračovat.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- OBSAH TÉMATU 4: HÁDANKY -->
+        <!-- ZÁLOŽKA 4: HÁDANKY -->
         <div data-helper-panel="hadanky" class="helper-topic-panel hidden space-y-6">
-          <!-- Hlavní úvod a princip eventu -->
           <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8 space-y-4">
-            <div class="flex flex-wrap items-center gap-2">
-              <span class="px-3 py-1 rounded-full bg-pustina-signal/15 border border-pustina-signal/35 text-xs font-semibold uppercase tracking-wider text-pustina-signal">
-                <i class="fa-solid fa-puzzle-piece mr-1.5"></i>Pustina Dynamic World – Hádanky
-              </span>
-              <span class="px-3 py-1 rounded-full bg-pustina-card border border-pustina-border text-xs font-semibold text-gray-300">
-                60 různých míst po Chernarusi
-              </span>
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-pustina-signal/15 border border-pustina-signal/35 text-xs font-semibold uppercase tracking-wider text-pustina-signal">
+                  <i class="fa-solid fa-puzzle-piece mr-1.5"></i>Pustina Dynamic World – Hádanky
+                </span>
+                <span class="px-3 py-1 rounded-full bg-pustina-card border border-pustina-border text-xs font-semibold text-gray-300">
+                  60 různých míst po Chernarusi
+                </span>
+              </div>
+
+              <a href="https://discord.com/channels/1198720522259804220/1555615186268987552" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2 bg-[#5865F2] hover:bg-[#4752C4] text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl transition shadow-md">
+                <i class="fa-brands fa-discord text-base"></i>
+                <span>Kanál Hádanek na Discordu</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-85"></i>
+              </a>
             </div>
 
-            <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">Hádanky & Skryté truhly Sea Chest</h2>
-
-            <div class="space-y-3 text-sm sm:text-base text-gray-300 leading-relaxed max-w-4xl">
-              <p>
-                Po Chernarusi jsou ukryté zásoby. Jakmile začne nový event, všem hráčům se zobrazí hádanka. Jejím vyřešením musíte určit správné místo a najít ukrytou dřevěnou truhlu <strong class="text-white">Sea Chest</strong>.
-              </p>
-              <p>
-                Chernarus ukrývá <strong class="text-white">šedesát různých míst</strong> a správná odpověď nemusí být vždy ta první, která vás napadne. Pozorně čtěte každé slovo.
+            <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">PUSTINA DYNAMIC WORLD – HÁDANKY</h2>
+            <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-4xl">
+              Po Chernarusi jsou ukryté zásoby. Jakmile začne nový event, všem hráčům se zobrazí hádanka. Jejím vyřešením musíte určit správné místo a najít ukrytou dřevěnou truhlu <strong class="text-white">Sea Chest</strong>.
+            </p>
+            <div class="bg-amber-500/10 border border-amber-500/35 rounded-xl p-4 flex items-center gap-3">
+              <i class="fa-solid fa-compass text-pustina-amber text-lg shrink-0"></i>
+              <p class="text-sm font-semibold text-amber-200">
+                Pozorně čtěte každé slovo. Chernarus ukrývá šedesát různých míst a správná odpověď nemusí být vždy ta první, která vás napadne.
               </p>
             </div>
           </div>
 
-          <!-- Časy eventu & Co hledat -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
-            <!-- Časy eventu -->
             <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-4">
               <h3 class="font-display font-bold text-2xl text-white">
                 <i class="fa-regular fa-clock text-pustina-amber mr-2"></i>Časy eventu
@@ -1071,25 +1273,20 @@
                 <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border">• První hádanka začne <strong class="text-white">90 minut</strong> po restartu serveru.</li>
                 <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border">• Na nalezení truhly máte celkem <strong class="text-white">3 hodiny</strong>.</li>
                 <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border">• Po <strong class="text-white">90 minutách</strong> se zobrazí první nápověda.</li>
-                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border">• Po <strong class="text-white">135 minutách</strong> se zobrazí druhá a přesnější nápověda.</li>
-                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border">• Společně s nápovědou se vždy zopakuje také původní hádanka.</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border">• Po <strong class="text-white">135 minutách</strong> se zobrazí druhá a přesnější nápověda (společně s nápovědou se vždy zopakuje také původní hádanka).</li>
                 <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border">• Nově připojený hráč dostane aktuální hádanku a poslední zveřejněnou nápovědu.</li>
                 <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border">• Další hádanka začne <strong class="text-white">90 minut</strong> po ukončení předchozího eventu.</li>
                 <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border">• Každá zpráva zůstane zobrazená <strong class="text-white">30 sekund</strong>.</li>
               </ul>
             </div>
 
-            <!-- Co hledat, Jak získat odměnu & Když nikdo nenajde -->
             <div class="space-y-5">
               <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3">
                 <h3 class="font-display font-bold text-2xl text-white">
                   <i class="fa-solid fa-magnifying-glass-location text-pustina-ice mr-2"></i>Co hledat
                 </h3>
                 <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                  Cílem je podle hádanky a postupných nápověd určit správnou oblast. Hádanky směřují ke známým bodům Chernarusu – na místě hledejte <strong class="text-white">Sea Chest</strong> s odměnou.
-                </p>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                  Truhla nemusí stát přímo před hlavní dominantou. Dobře prohledejte její okolí a blízké stavby.
+                  Cílem je podle hádanky a postupných nápověd určit správnou oblast. Hádanky směřují ke známým bodům Chernarusu – na místě hledejte dřevěnou truhlu <strong class="text-white">Sea Chest</strong> s odměnou. Truhla nemusí stát přímo před hlavní dominantou; dobře prohledejte její okolí a blízké stavby.
                 </p>
               </div>
 
@@ -1098,10 +1295,7 @@
                   <i class="fa-solid fa-trophy text-pustina-amber mr-2"></i>Jak získat odměnu
                 </h3>
                 <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                  Za nález se považuje přiblížení hráče přibližně na <strong class="text-white">5 metrů</strong> od truhly. Server následně oznámí jméno úspěšného nálezce všem hráčům.
-                </p>
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                  Po nalezení zůstane truhla na místě ještě <strong class="text-white">15 minut</strong>. Během této doby si odměnu vyzvedněte – poté truhla a její zbývající obsah zmizí.
+                  Za nález se považuje přiblížení hráče přibližně na <strong class="text-white">5 metrů</strong> od truhly. Server následně oznámí jméno úspěšného nálezce všem hráčům. Po nalezení zůstane truhla na místě ještě <strong class="text-white">15 minut</strong> – během této doby si odměnu vyzvedněte, poté truhla i zbývající obsah zmizí.
                 </p>
               </div>
 
@@ -1116,7 +1310,6 @@
             </div>
           </div>
 
-          <!-- Jaké jsou odměny -->
           <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-5">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-pustina-border pb-3">
               <h3 class="font-display font-bold text-2xl text-white">
@@ -1125,82 +1318,327 @@
               <span class="text-xs font-mono text-pustina-amber">3 úrovně dle obtížnosti lokace</span>
             </div>
 
-            <p class="text-xs sm:text-sm text-gray-300">
-              Odměny mají tři úrovně podle obtížnosti vybrané lokace:
-            </p>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
-              <div class="bg-pustina-panel border border-emerald-500/35 rounded-xl p-4 space-y-1">
+              <div class="bg-pustina-panel border border-emerald-500/40 rounded-xl p-4 space-y-1.5">
                 <p class="font-bold text-emerald-300">🟢 Úroveň 1</p>
                 <p class="font-mono text-white font-semibold">8 náhodných položek</p>
               </div>
-              <div class="bg-pustina-panel border border-amber-500/35 rounded-xl p-4 space-y-1">
+              <div class="bg-pustina-panel border border-amber-500/40 rounded-xl p-4 space-y-1.5">
                 <p class="font-bold text-amber-300">🟡 Úroveň 2</p>
                 <p class="font-mono text-white font-semibold">12 náhodných položek</p>
               </div>
-              <div class="bg-pustina-panel border border-red-500/35 rounded-xl p-4 space-y-1">
+              <div class="bg-pustina-panel border border-red-500/45 rounded-xl p-4 space-y-1.5">
                 <p class="font-bold text-red-300">🔴 Úroveň 3</p>
                 <p class="font-mono text-white font-semibold">16 náhodných položek</p>
               </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-gray-300">
-              <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 space-y-2">
-                <p class="font-semibold text-white">Co můžete v truhle najít:</p>
-                <ul class="space-y-1">
-                  <li>• hodnotné útočné a odstřelovací zbraně,</li>
-                  <li>• odpovídající zásobníky ke zbraním,</li>
-                  <li>• kvalitní optiky a tlumiče,</li>
-                  <li>• taktické vesty a pláty,</li>
-                  <li>• helmy, batohy, bundy a kalhoty,</li>
-                  <li>• peněžní odměny.</li>
-                </ul>
+              <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 space-y-1.5">
+                <p class="font-semibold text-white">V truhle můžete najít například:</p>
+                <p>• hodnotné útočné a odstřelovací zbraně,</p>
+                <p>• odpovídající zásobníky ke zbraním,</p>
+                <p>• kvalitní optiky a tlumiče,</p>
+                <p>• taktické vesty a pláty,</p>
+                <p>• helmy, batohy, bundy a kalhoty,</p>
+                <p>• peněžní odměny.</p>
               </div>
-
               <div class="bg-pustina-panel border border-pustina-border rounded-xl p-4 flex items-center">
-                <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                  Výběr je náhodný. Z jednotlivých kategorií <strong class="text-white">oblečení, helem, vest a batohů</strong> může být v jedné odměně maximálně <strong class="text-white">jeden kus</strong>.
-                </p>
+                <p>Výběr je náhodný. Z jednotlivých kategorií <strong class="text-white">oblečení, helem, vest a batohů</strong> může být v jedné odměně maximálně <strong class="text-white">jeden kus</strong>.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- OBSAH TÉMATU 5: VANILLA CRAFTY -->
-        <div data-helper-panel="vanilla-crafty" class="helper-topic-panel hidden space-y-5">
+        <!-- ZÁLOŽKA 5: VANILLA CRAFTY (7 kategorií, BEZ luku a šípů) -->
+        <div data-helper-panel="vanilla-crafty" class="helper-topic-panel hidden space-y-6">
           <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8 space-y-3">
-            <span class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/35 text-xs font-semibold uppercase tracking-wider text-emerald-300">
-              <i class="fa-solid fa-hammer mr-1.5"></i>Základní výroba
-            </span>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/35 text-xs font-semibold uppercase tracking-wider text-emerald-300">
+                <i class="fa-solid fa-hammer mr-1.5"></i>Oficiální recepty DayZ
+              </span>
+              <span class="px-3 py-1 rounded-full bg-pustina-card border border-pustina-border text-xs font-semibold text-gray-300">
+                7 kategorií • Základní přežití
+              </span>
+            </div>
             <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">Vanilla crafty</h2>
-            <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-3xl">
-              Přehled základních receptů pro přežití, rozdělání ohně, výrobu provizorních batohů, přístřešků a opravu vybavení. Konkrétní recepty najdete také na Discordu v kanálu <code class="text-emerald-300">#vanilla_crafty</code>.
+            <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-4xl">
+              Kompletní přehled oficiálních vanilla receptů pro přežití v DayZ – od výroby prvního nože, lana a ohniště přes lov, batohy a Ghillie maskování až po zdravotnické pomůcky a stavbu základny.
             </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <!-- 1. Základní materiály a nástroje -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-2xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-toolbox text-emerald-400 mr-2"></i>1. Základní materiály a nástroje
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Hadry (Rags):</strong> Ostrý nástroj (nůž / sekera) + oblečení</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Látkové proužky (Burlap Strips):</strong> Ostrý nástroj + pytlovina (Burlap Sack)</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Improvizované lano (Improvised Rope):</strong> 6× hadr + 6× hadr <em>nebo</em> nůž + střeva (Guts)</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kamenný nůž (Stone Knife):</strong> 2× malý kámen <em>nebo</em> 1× malý kámen + velký balvan / skalní masiv</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kostěný nůž (Bone Knife):</strong> 2× kost <em>nebo</em> 1× kost + velký balvan</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Provazový opasek (Rope Belt):</strong> Lano + nůž</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kožený opasek (Leather Belt):</strong> Vydělaná kůže + nůž</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Vydělaná kůže (Tanned Leather):</strong> Zvířecí kůže + zahradnické vápno (Garden Lime)</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Látkový obal na zbraň (Burlap Weapon Wrap):</strong> 2× látkový proužek + tráva / rostlinný materiál (Plant Material)</li>
+              </ul>
+            </article>
+
+            <!-- 2. Oheň, vaření a přežití -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-2xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-fire text-pustina-copper mr-2"></i>2. Oheň, vaření a přežití
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Ohniště (Fireplace):</strong> Krátký klacek nebo palivové dříví + podpal (hadry, papír, obvaz nebo kůra)</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kamenný kruh na ohniště:</strong> Ohniště + 8× velký kámen</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kamenná pec (Stone Oven):</strong> Ohniště + 16× velký kámen</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Improvizovaný zapalovač (Hand Drill Kit):</strong> Krátký klacek + kůra ze stromu (Tree Bark)</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Pochodeň (Torch):</strong> Krátký / dlouhý klacek + hadry (lze vylepšit tukem nebo pryskyřicí)</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Improvizovaný stojan na vaření:</strong> 2× krátký klacek + 1× dlouhý klacek</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Zaostřený klacek (na opékání):</strong> Dlouhý klacek + nůž</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border space-y-1">
+                  <p><strong class="text-white">Improvizovaný přístřešek (Improvised Shelter):</strong></p>
+                  <p class="text-xs text-gray-400">• Nejprve <strong class="text-gray-200">Shelter Kit:</strong> 4× krátký klacek + lano</p>
+                  <p class="text-xs text-gray-400">• Dostavba (3 varianty): 4× dlouhý klacek + <strong class="text-gray-200">50× krátký klacek</strong> / <strong class="text-gray-200">4× vydělaná kůže</strong> / <strong class="text-gray-200">4× celta (Tarp)</strong></p>
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <!-- 3. Lov a rybaření -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-2xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-fish text-pustina-ice mr-2"></i>3. Lov a rybaření
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Improvizovaný rybářský prut:</strong> Dlouhý klacek + lano</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Rybářský háček (kostěný / dřevěný):</strong> Nůž + kost <em>nebo</em> nůž + krátký klacek</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Návnada (Worm):</strong> Vykopat nožem / motykou / lopatou ze země a nasadit přímo na háček</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Malá past na ryby (Small Fish Trap):</strong> Plastová lahev + nůž</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Velká síťová past na ryby (Fish Net Trap):</strong> Síťovina (Netting) + drát (Metal Wire)</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Oko na králíky / slepice (Snare Trap):</strong> Krátký klacek + drát (Metal Wire)</li>
+              </ul>
+            </article>
+
+            <!-- 4. Batohy a oblečení -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-2xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-shirt text-pustina-amber mr-2"></i>4. Batohy a oblečení
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kurýrní vak (Courier Bag – 30 slotů):</strong> Pytlovina (Burlap Sack) + lano</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Improvizovaný batoh (Improvised Backpack – 42 slotů):</strong> Kurýrní vak + 3× krátký klacek</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kožešinový vak (Fur Courier Bag – 30 slotů):</strong> Kůže z divočáka (Wild Boar Pelt) + lano</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kožešinový batoh (Fur Backpack – 42 slotů):</strong> Kožešinový vak + 3× krátký klacek</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kožený batoh (Leather Backpack – 63 slotů):</strong> Vydělaná kůže + sada na šití kůže (Leather Sewing Kit)</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Improvizované oblečení z hadrů (po 2–6 hadrech):</strong> Zavinovačka na hlavu, obličej, rukavice, tričko, kalhoty i boty na nohy (Foot Wraps)</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Páska na ruku (Armband):</strong> Pláštěnka (Raincoat) nebo vlajka + nůž</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border space-y-1">
+                  <p><strong class="text-white">Maskování Ghillie (hejkaly):</strong></p>
+                  <p class="text-xs text-gray-400">• <strong class="text-gray-200">Ghillie Gun Wrap / Hood:</strong> 2× látkový proužek + 1× síťovina (Netting)</p>
+                  <p class="text-xs text-gray-400">• <strong class="text-gray-200">Ghillie Bushrag:</strong> 4× látkový proužek + 2× síťovina</p>
+                  <p class="text-xs text-gray-400">• <strong class="text-gray-200">Ghillie Cloak:</strong> 6× látkový proužek + 3× síťovina</p>
+                  <p class="text-xs text-gray-400">• <strong class="text-gray-200">Ghillie Suit (celý oblek):</strong> 10× látkový proužek + 4× síťovina</p>
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <!-- 5. Zbraně, pastičky a výbušniny -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-bomb text-red-400 mr-2"></i>5. Zbraně, pastičky a výbušniny
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Improvizovaný tlumič (Plastic Bottle Suppressor):</strong> Plastová lahev + lepicí páska (Duct Tape)</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Improvizované kopí (Improvised Spear):</strong> Dlouhý klacek + kost nebo kamenný nůž</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Baseballová pálka s hřebíky (Nailed Bat):</strong> Baseballová pálka + hřebíky</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Dřevěný kyj s drátem:</strong> Baseballová pálka + ostnatý drát</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Nástražný drát (Tripwire):</strong> 2× krátký klacek + drát (Metal Wire) – lze osadit granátem, dýmovnicí nebo Claymore</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Improvised Explosive (IED):</strong> Ochranný kufr (Protective Case) + elektronická opravná sada (Electrical Repair Kit) + výbušniny + odpalovač (Remote Detonator / budík / kuchyňská minutka)</li>
+              </ul>
+            </article>
+
+            <!-- 6. Zdravotnické vybavení -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-kit-medical text-pustina-signal mr-2"></i>6. Zdravotnické vybavení
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Dlaha na zlomenou nohu (Splint):</strong> 2× krátký klacek + 4× hadr <em>nebo</em> 1× celý obvaz (Bandage) <em>nebo</em> lepicí páska</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Krevní vak k transfuzi (IV Blood Bag):</strong> Naplněný krevní vak + IV Start Kit</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Fyziologický roztok (IV Saline Bag):</strong> Saline Bag + IV Start Kit</li>
+              </ul>
+            </article>
+
+            <!-- 7. Stavba základny -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-house-chimney text-pustina-amber mr-2"></i>7. Stavba základny (Base Building)
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Sada na plot (Fence Kit):</strong> 2× krátký klacek + lano</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Sada na strážní věž (Watchtower Kit):</strong> 4× krátký klacek + lano</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Sada na vlajkový stožár (Flagpole Kit):</strong> 3× krátký klacek + lano</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Dřevěná bedna (Wooden Crate – 50 slotů):</strong> 8× prkno (Wooden Plank) + 16× hřebík (Nails)</li>
+              </ul>
+            </article>
           </div>
         </div>
 
-        <!-- OBSAH TÉMATU 6: POKROČILÉ CRAFTY -->
-        <div data-helper-panel="pokrocile-crafty" class="helper-topic-panel hidden space-y-5">
+        <!-- ZÁLOŽKA 6: POKROČILÉ CRAFTY -->
+        <div data-helper-panel="pokrocile-crafty" class="helper-topic-panel hidden space-y-6">
           <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8 space-y-3">
-            <span class="px-3 py-1 rounded-full bg-red-500/15 border border-red-500/35 text-xs font-semibold uppercase tracking-wider text-red-300">
-              <i class="fa-solid fa-screwdriver-wrench mr-1.5"></i>Rozšířené recepty
-            </span>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full bg-red-500/15 border border-red-500/35 text-xs font-semibold uppercase tracking-wider text-red-300">
+                <i class="fa-solid fa-screwdriver-wrench mr-1.5"></i>Rozšířené serverové recepty
+              </span>
+              <span class="px-3 py-1 rounded-full bg-pustina-card border border-pustina-border text-xs font-semibold text-gray-300">
+                7 kategorií • Výroba v ruce
+              </span>
+            </div>
             <h2 class="font-display font-bold text-2xl sm:text-4xl text-white">Pokročilé crafty</h2>
-            <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-3xl">
-              Rozšířené serverové recepty na pokročilé vybavení, stavební prvky a speciální předměty z kanálu <code class="text-red-300">#pokročilé_crafty</code>.
+            <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-4xl">
+              Rozšířené recepty dostupné na serveru CZ/SK PUSTINA – výroba nářadí, plechů a hřebíků, kuše se šípy, koženého oblečení, postupné vylepšování batohů, medicína i opravy vozidel.
             </p>
+          </div>
+
+          <!-- 1. Nástroje a průmyslové věci -->
+          <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-4">
+            <h3 class="font-display font-bold text-2xl text-white border-b border-pustina-border pb-2.5">
+              <i class="fa-solid fa-wrench text-pustina-amber mr-2"></i>1. Nástroje a průmyslové věci
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-gray-300">
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Hřebíky (5 ks):</strong> Kámen + Brousek</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Hřebíky (24 ks):</strong> Drát / Ostnatý drát + Kleště</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Plech (Sheet Metal):</strong> Pila na železo / Ruční pila + Kapota / Kufr / Dveře auta</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Ostnatý drát:</strong> 20× Hřebíky + Drát</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Krabička hřebíků (70 ks):</strong> 70× Hřebíky + Papír</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Hořák (Horní díl svářečky):</strong> Zapalovač + Kovová trubka</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kompletní svářečka:</strong> Malá / střední / velká Kartuš + Plynový hořák</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Brousek (Sharpening Stone):</strong> Kombinace 2× kamenný nůž</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Malý kámen (Small Stone):</strong> 2× velký kámen (Large Stone)</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Krumpáč nebo Štípací sekera:</strong> Velký kámen (Large Stone) + Topůrko (Tool Handle)</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kleště (Pliers):</strong> Drát nebo Ostnatý drát + Kovová trubka (Pipe)</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Topůrko (Tool Handle):</strong> Štípací sekera (Splitting Axe) + Dřevěná kláda (Wooden Log)</div>
+            </div>
+          </article>
+
+          <!-- 2. Zbraně a munice & 3. Oblečení a kůže -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <!-- 2. Zbraně a munice -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-2xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-crosshairs text-red-400 mr-2"></i>2. Zbraně a munice
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kuše:</strong> Dřevo na otop + Ocelové lanko</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Improvizovaný šíp:</strong> Krátký klacek + Nůž</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Vylepšený šíp:</strong> Improvizovaný šíp + Peří</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Lovecký šíp:</strong> Uhlíková ruda + 5× Vylepšený šíp</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Nášlapná mina:</strong> Granát + Budík</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Nástražný drát:</strong> 2× Krátký klacek + Ocelové lanko / Provaz / Drát</li>
+              </ul>
+            </article>
+
+            <!-- 3. Oblečení a kůže -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-2xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-vest text-pustina-ice mr-2"></i>3. Oblečení a kůže (kožené oblečení)
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Vyčiněná kůže:</strong> Kůže zvířete + Hnojivo / Zahradnické vápno</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Šitíčko (Sewing Kit):</strong> Dřevěná jehla + provaz <span class="text-gray-400">(Dřevěná jehla: Krátký klacek + nůž / sekera apod.)</span></li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Šití na kůži (Leather Sewing Kit):</strong> Vyčiněná kůže + Šitíčko</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border space-y-1.5">
+                  <p><strong class="text-white">Kožené věci (Vyčiněná kůže + Šití na kůži):</strong></p>
+                  <div class="grid grid-cols-2 sm:grid-cols-3 gap-1.5 text-xs text-gray-200 pt-1">
+                    <span class="bg-pustina-card px-2.5 py-1 rounded-lg border border-pustina-border">• Klobouk</span>
+                    <span class="bg-pustina-card px-2.5 py-1 rounded-lg border border-pustina-border">• Rukavice</span>
+                    <span class="bg-pustina-card px-2.5 py-1 rounded-lg border border-pustina-border">• Batoh (kožený pytel)</span>
+                    <span class="bg-pustina-card px-2.5 py-1 rounded-lg border border-pustina-border">• Vesta</span>
+                    <span class="bg-pustina-card px-2.5 py-1 rounded-lg border border-pustina-border">• Bunda</span>
+                    <span class="bg-pustina-card px-2.5 py-1 rounded-lg border border-pustina-border">• Kalhoty</span>
+                  </div>
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- 4. Batohy a vylepšení -->
+          <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-pustina-border pb-2.5">
+              <h3 class="font-display font-bold text-2xl text-white">
+                <i class="fa-solid fa-suitcase-rolling text-pustina-copper mr-2"></i>4. Batohy a vylepšení
+              </h3>
+              <span class="text-xs font-semibold text-amber-300">‼️ Pozor na opotřebení při opakovaném spojování!</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-gray-300">
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Kožešinový batoh:</strong> Kůže zvířete + Provaz</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Vylepšený kožešinový batoh:</strong> Kožešinový batoh + 3× klacek</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Pytlový batoh:</strong> Pytel + Provaz (vylepšený + 3× klacek)</div>
+              <div class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-amber-500/35">
+                <strong class="text-white">Vylepšení batohů + Šití na kůži:</strong> Vyrábí postupně větší a lepší batohy opakovaným spojením (od pytlových a kožešinových vaků přes Assault/Taloon a Hunting batoh až po Mountain a Field Backpack).
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Medicína a jídlo, 6. Opravy aut & 7. Ostatní -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <!-- 5. Medicína a jídlo -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-pills text-pustina-signal mr-2"></i>5. Medicína a jídlo
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Obvaz (Bandage):</strong> 4× Hadr + Sada na šití</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Dezinfekční sprej:</strong> 1× Antibiotika (Tetracycline) + Láhev vody (100 %)</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Léky:</strong> Jedlá houba (Bedla / Hřib / Ryzec) + rostlinný materiál</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Uhlíková ruda (Charcoal):</strong> Kámen + Hasák</li>
+              </ul>
+            </article>
+
+            <!-- 6. Opravy aut -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-car-burst text-pustina-ice mr-2"></i>6. Opravy aut
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Dveře (oprava):</strong> Poškozené dveře + Svářečka = opravené dveře</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Pneumatika (oprava):</strong> Zničená pneu + Sada na opravu pneu (100 %) = Netknutá pneu</li>
+              </ul>
+            </article>
+
+            <!-- 7. Ostatní -->
+            <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3.5">
+              <h3 class="font-display font-bold text-xl text-white border-b border-pustina-border pb-2.5">
+                <i class="fa-solid fa-leaf text-emerald-400 mr-2"></i>7. Ostatní
+              </h3>
+              <ul class="space-y-2 text-xs sm:text-sm text-gray-300">
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Síťovina (Netting):</strong> 6× Hadr + Nůž / sekera apod.</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Maskovací síť (Camo Net):</strong> 4× Síťovina (Netting) + Rostlinný materiál</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Pytlovina (Proužky):</strong> Pytel + Nůž / sekera apod.</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Ohňostroj:</strong> Kouřový granát + Světlice</li>
+                <li class="bg-pustina-panel px-3.5 py-2.5 rounded-xl border border-pustina-border"><strong class="text-white">Hnojivo / Zahradnické vápno:</strong> Kurýrní vak (Pytel / kůže + Lano) + Rostlinný materiál (vápno lze dále doplnit na plný stav dalším rostlinným materiálem)</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
 
       <!-- ========================================================= -->
-      <!-- 2. NOVINKY & MECHANIKY (#novinky)                         -->
+      <!-- 3. NOVINKY & MECHANIKY (#novinky)                         -->
       <!-- ========================================================= -->
       <section id="view-novinky" data-view="novinky" class="page-view hidden space-y-6">
         <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8">
-          <span class="text-xs font-semibold uppercase tracking-widest text-pustina-copper">Aktuality & Herní systémy</span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-pustina-copper">Herní systémy na serveru</span>
           <h1 class="font-display font-bold text-3xl sm:text-5xl text-white mt-1">Novinky & Mechaniky</h1>
-          <p class="text-sm sm:text-base text-gray-400 mt-2">Přehled klíčových mechanik a novinek ze serveru CZ/SK PUSTINA.</p>
+          <p class="text-sm sm:text-base text-gray-400 mt-2">Přehled klíčových funkcí a unikátních mechanik, které dělají hraní na CZ/SK PUSTINA přehlednějším a zábavnějším.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -1261,24 +1699,24 @@
 
           <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3">
             <div class="flex items-center justify-between gap-2">
-              <span class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-pustina-copper/15 text-pustina-copper">Události</span>
-              <span class="text-xs text-gray-400 font-mono">AI & Hádanky</span>
+              <span class="px-2.5 py-1 text-xs font-semibold rounded-lg bg-pustina-copper/15 text-pustina-copper">Příběhové úkoly</span>
+              <span class="text-xs text-gray-400 font-mono">Questy & Eventy</span>
             </div>
-            <h2 class="font-display font-bold text-2xl text-white">Pustina Eventy (AI lokace & Hádanky)</h2>
+            <h2 class="font-display font-bold text-2xl text-white">Custom příběhové úkoly & Eventy</h2>
             <p class="text-sm text-gray-300 leading-relaxed">
-              Pravidelné AI lokace a hádanky s bednami s odměnou jsou propojené s Discord notifikacemi (<code class="text-pustina-signal">#event-ai-lokace</code> a <code class="text-pustina-signal">#event-hádanky</code>), takže vždy víte, kdy událost začíná a končí.
+              Na mapě na vás čekají custom příběhové úkoly, pravidelné AI konvoje, AI lokace a hádanky s bednami s odměnou, které jsou propojené s Discord notifikacemi.
             </p>
           </article>
         </div>
       </section>
 
       <!-- ========================================================= -->
-      <!-- 3. OBCHOD A BAZAR (#obchod)                               -->
+      <!-- 4. Obchod & tipy (#obchod)                               -->
       <!-- ========================================================= -->
       <section id="view-obchod" data-view="obchod" class="page-view hidden space-y-6">
         <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8">
           <span class="text-xs font-semibold uppercase tracking-widest text-pustina-ice">Obchodní zóny & Pravidla bazaru</span>
-          <h1 class="font-display font-bold text-3xl sm:text-5xl text-white mt-1">Obchod a tipy pro hráče</h1>
+          <h1 class="font-display font-bold text-3xl sm:text-5xl text-white mt-1">Obchod & tipy</h1>
           <p class="text-sm sm:text-base text-gray-400 mt-2">Přehled obchodních zón na mapě Chernarus, fungování hráčského bazaru v Otmelu a praktické tipy.</p>
         </div>
 
@@ -1298,7 +1736,7 @@
             <span class="text-xs font-bold uppercase tracking-wider text-pustina-signal block">Východní střed mapy</span>
             <h2 class="font-display font-bold text-2xl text-white">Romashka</h2>
             <p class="text-sm text-gray-300 leading-relaxed">
-              <strong class="text-white">Dealer / Speciální výkup:</strong> Obchodní zóna ve východní části mapy zaměřená na výkup speciálních komodit.
+              <strong class="text-white">Dealer :</strong> Obchodní zóna ve východní části mapy zaměřená na výkup drog.
             </p>
           </div>
 
@@ -1306,7 +1744,7 @@
             <span class="text-xs font-bold uppercase tracking-wider text-pustina-ice block">Sever mapy Chernarus</span>
             <h2 class="font-display font-bold text-2xl text-white">Pobeda</h2>
             <p class="text-sm text-gray-300 leading-relaxed">
-              <strong class="text-white">MMG & Těžební obchodník:</strong> Kompletní výbava MMG a výkup vytěžených surovin ze severních dolů.
+              <strong class="text-white">MMG & Těžební obchodník:</strong> Kompletní výbava MMG a výkup vytěžených surovin ze severních dolů (kompletní ceník najdete v sekci <em>Herní pomocník & tipy → Těžba & Suroviny</em>).
             </p>
           </div>
         </div>
@@ -1315,7 +1753,7 @@
           <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3">
             <h2 class="font-display font-bold text-2xl text-white">🛒 Tipy a pravidla pro hráčský bazar</h2>
             <ul class="space-y-2.5 text-sm text-gray-300">
-              <li class="bg-pustina-panel p-3.5 rounded-xl border border-pustina-border">• <strong class="text-white">Věci vkládejte z rukou:</strong> Pokud prodáváte oblečení nebo batoh, který máte na sobě, prodají se i věci uložené uvnitř.</li>
+              <li class="bg-pustina-panel p-3.5 rounded-xl border border-pustina-border">• <strong class="text-white">Věci vkládejte z rukou:</strong> Pokud prodáváte oblečení nebo batoh, který máte na sobě, prodají se i věci uložené uvnř.</li>
               <li class="bg-pustina-panel p-3.5 rounded-xl border border-pustina-border">• <strong class="text-white">Nákup vozidla v bazaru:</strong> Po zakoupení vozidla dostanete klíč. Ihned nasaďte vlastní 8místný <strong class="text-white">carlock</strong> a původní klíč vyhoďte – nezamykejte jím vozidlo.</li>
               <li class="bg-pustina-panel p-3.5 rounded-xl border border-pustina-border">• <strong class="text-white">Stažení nabídky:</strong> Neprodané zboží si můžete z bazaru vyzvednout zpět do 8 dnů bez dalšího poplatku.</li>
             </ul>
@@ -1333,7 +1771,7 @@
       </section>
 
       <!-- ========================================================= -->
-      <!-- 4. ODMĚNY (#odmeny)                                       -->
+      <!-- 5. ODMĚNY (#odmeny)                                       -->
       <!-- ========================================================= -->
       <section id="view-odmeny" data-view="odmeny" class="page-view hidden space-y-6">
         <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8">
@@ -1413,7 +1851,7 @@
       </section>
 
       <!-- ========================================================= -->
-      <!-- 5. PRAVIDLA (#pravidla)                                   -->
+      <!-- 6. PRAVIDLA (#pravidla)                                   -->
       <!-- ========================================================= -->
       <section id="view-pravidla" data-view="pravidla" class="page-view hidden space-y-6">
         <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8">
@@ -1458,7 +1896,7 @@
       </section>
 
       <!-- ========================================================= -->
-      <!-- 6. PODPORA / DONATE (#podpora)                            -->
+      <!-- 7. PODPORA / DONATE (#podpora)                            -->
       <!-- ========================================================= -->
       <section id="view-podpora" data-view="podpora" class="page-view hidden space-y-6">
         <div class="bg-pustina-panel border border-pustina-ice/40 rounded-2xl p-6 sm:p-8">
@@ -1473,7 +1911,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <!-- Závazek Anti-Pay-to-Win -->
           <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3">
             <h2 class="font-display font-bold text-2xl text-white">
               <i class="fa-solid fa-ban text-pustina-copper mr-2"></i>Přísný zákaz Pay-to-Win
@@ -1481,11 +1918,10 @@
             <ul class="space-y-2.5 text-sm text-gray-300">
               <li class="bg-pustina-panel p-3.5 rounded-xl border border-pustina-border">• <strong class="text-white">Žádné herní itemy ani zbraně:</strong> Za dobrovolný příspěvek nezískáte zbraně, munici, stavební materiál, vozidla ani herní měnu.</li>
               <li class="bg-pustina-panel p-3.5 rounded-xl border border-pustina-border">• <strong class="text-white">Žádné VIP výhody ani přednostní práva:</strong> Příspěvek nezakládá nárok na VIP balíčky, prioritu ve frontě ani výjimky z pravidel serveru.</li>
-              <li class="bg-pustina-panel p-3.5 rounded-xl border border-pustina-border">• <strong class="text-white">Soulad s pravidly Bohemia Interactive:</strong> Provoz serveru respektuje pravidla komunitních serverů DayZ.</li>
+              <li class="bg-pustina-panel p-3.5 rounded-xl border border-pustina-border">• <strong class="text-white">Soulad s pravidly Bohemia Interactive:</strong> Provoz serveru respektuje pravidla komunitních serverů DayZ (povoleny pouze čistě kosmetické retextury bez vlivu na hratelnost).</li>
             </ul>
           </div>
 
-          <!-- Dobrovolný příspěvek na provoz u Fakahedy -->
           <div class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-4 flex flex-col justify-between">
             <div class="space-y-3">
               <h2 class="font-display font-bold text-2xl text-white">
@@ -1495,19 +1931,15 @@
                 Veškeré dobrovolné dary jdou výhradně na pokrytí nákladů za pronájem herního serveru u <strong class="text-white">Fakahedy</strong> a technické zázemí komunity <strong class="text-white">CZ/SK PUSTINA</strong>.
               </p>
               <p class="text-xs text-gray-400 leading-relaxed">
-                Příspěvek je zcela dobrovolný a nenárokový. Pokud chcete provoz serveru podpořit, ozvěte se nám přes komunitní Discord nebo využijte připravený odkaz níže.
+                Příspěvek je zcela dobrovolný a nenárokový. Pokud chcete provoz serveru podpořit, ozvěte se nám přes komunitní Discord.
               </p>
             </div>
 
-            <!-- Připravený blok pro odkaz (např. Ko-fi / Discord podpora) -->
             <div class="bg-pustina-panel border border-dashed border-pustina-ice/45 rounded-xl p-4 space-y-3">
               <div class="flex items-center justify-between gap-2">
-                <span class="text-xs font-semibold uppercase tracking-wider text-pustina-ice">Dobrovolný příspěvek (Ko-fi / Discord)</span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-pustina-ice">Dobrovolný příspěvek (Fakaheda / Discord)</span>
                 <span class="px-2.5 py-0.5 rounded-md bg-pustina-signal/15 text-pustina-signal text-xs font-semibold">Bez herních výhod</span>
               </div>
-              <p class="text-xs text-gray-300">
-                Odkaz na Ko-fi nebo informace k podpoře chodu serveru jsou k dispozici po domluvě na našem Discordu.
-              </p>
               <a href="https://discord.gg/D6yV8ax4hY" target="_blank" rel="noopener noreferrer"
                  class="inline-flex items-center justify-center gap-2 w-full bg-pustina-card hover:bg-pustina-bg border border-pustina-border text-white text-xs sm:text-sm font-semibold py-2.5 px-4 rounded-xl transition">
                 <i class="fa-brands fa-discord text-[#5865F2]"></i>
@@ -1519,7 +1951,7 @@
       </section>
 
       <!-- ========================================================= -->
-      <!-- 7. PRÁVNÍ INFO & GDPR (#pravni-info)                      -->
+      <!-- 8. PRÁVNÍ INFO & GDPR (#pravni-info)                      -->
       <!-- ========================================================= -->
       <section id="view-pravni-info" data-view="pravni-info" class="page-view hidden space-y-6">
         <div class="bg-pustina-panel border border-pustina-border rounded-2xl p-6 sm:p-8">
@@ -1542,11 +1974,12 @@
           <article class="bg-pustina-card border border-pustina-border rounded-2xl p-6 space-y-3">
             <h2 class="font-display font-bold text-2xl text-white">2. Kontakt na správce</h2>
             <p class="text-sm text-gray-300 leading-relaxed">
-              Hlavním kontaktním kanálem pro hráče, dotazy či připomínky je oficiální komunitní Discord server:
+              Přímým kontaktním spojením na správce projektu pro dotazy, připomínky či právní záležitosti je osobní Discord profil nebo e-mail serveru:
             </p>
-            <div class="bg-pustina-panel border border-pustina-border rounded-xl p-3.5 text-sm space-y-1">
+            <div class="bg-pustina-panel border border-pustina-border rounded-xl p-3.5 text-sm space-y-1.5">
               <p><strong class="text-white">Správce projektu:</strong> Johny2000 (Tým CZ/SK PUSTINA)</p>
-              <p><strong class="text-white">Discord:</strong> <a href="https://discord.gg/D6yV8ax4hY" target="_blank" rel="noopener noreferrer" class="text-pustina-ice underline">https://discord.gg/D6yV8ax4hY</a></p>
+              <p><strong class="text-white">Discord:</strong> <a href="https://discord.com/users/745324409073434795" target="_blank" rel="noopener noreferrer" class="text-pustina-ice underline break-all">https://discord.com/users/745324409073434795</a></p>
+              <p><strong class="text-white">E-mail:</strong> <a href="mailto:czskpustina@seznam.cz" class="text-pustina-ice underline">czskpustina@seznam.cz</a></p>
             </div>
           </article>
 
@@ -1583,8 +2016,6 @@
         </p>
         <p class="text-xs text-gray-500 mt-0.5">
           <span>IP: 185.180.2.92:27581 • Neoficiální komunitní server hry DayZ</span>
-          <span class="mx-1.5 text-gray-600">•</span>
-          <span class="text-gray-500">v2.6 • Chernarus</span>
         </p>
       </div>
 
@@ -1624,7 +2055,7 @@
       }, 2800);
     }
 
-    // Přepínání témat v sekci Herní pomocník & tipy
+    // Přepínání záložek v sekci Herní pomocník & tipy
     function selectHelperTopic(topicKey) {
       document.querySelectorAll('.helper-topic-panel').forEach((panel) => {
         if (panel.dataset.helperPanel === topicKey) {
@@ -1646,12 +2077,6 @@
 
     // Přepínání samostatných pohledů podle hashe v URL
     function navigateTo(viewName, updateHash = true) {
-      if (viewName === 'konvoje') {
-        navigateTo('pomocnik', updateHash);
-        selectHelperTopic('konvoje');
-        return;
-      }
-
       const targetView = VALID_VIEWS.includes(viewName) ? viewName : 'prehled';
 
       document.querySelectorAll('.page-view').forEach((section) => {
@@ -1713,7 +2138,12 @@
 
     window.addEventListener('hashchange', () => {
       const hashView = window.location.hash.replace(/^#/, '');
-      navigateTo(hashView || 'prehled', false);
+      if (hashView === 'konvoje') {
+        navigateTo('pomocnik', false);
+        selectHelperTopic('konvoje');
+      } else {
+        navigateTo(hashView || 'prehled', false);
+      }
     });
 
     document.getElementById('mobile-drawer-btn').addEventListener('click', () => {
@@ -1796,7 +2226,12 @@
     window.addEventListener('DOMContentLoaded', () => {
       recalcRewards();
       const initialHashView = window.location.hash.replace(/^#/, '');
-      navigateTo(initialHashView || 'prehled', !initialHashView);
+      if (initialHashView === 'konvoje') {
+        navigateTo('pomocnik', false);
+        selectHelperTopic('konvoje');
+      } else {
+        navigateTo(initialHashView || 'prehled', !initialHashView);
+      }
     });
   </script>
 </body>
